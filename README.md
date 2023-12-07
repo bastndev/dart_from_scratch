@@ -73,20 +73,8 @@
   "cSpell.userWords": [
     "appbar",
     "ARGB",
-    "Arhuire",
     "bastndev",
-    "Cascadia",
-    "Cerpa",
     "Cupertino",
-    "donot",
-    "Gohit",
-    "lvlup",
-    "Oclok",
-    "Schyler",
-    "sunkha",
-    "tabnine",
-    "wireframe",
-    "Youglish"
   ],
   // FVM
   "dart.flutterSdkPath": "C:\\Users\\gohit\\fvm\\versions\\3.10.2",
