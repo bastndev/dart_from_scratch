@@ -3,6 +3,6 @@ void main(List<String> args) {
 
   print(number);
 
-  number = 5;
+  number = 9;
   print(number);
 }
