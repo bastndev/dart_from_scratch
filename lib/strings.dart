@@ -21,11 +21,23 @@
  */
 
 // --- --- -TODO: end
-void main() {
+/* void main() {
   String name = "Bastian";
 
   bool me = name.endsWith("ian");
   bool me2 = name.endsWith("ba");
+
+  print("You name contains Ba?: $me");
+  print("You name contains Ba?: $me2");
+}
+ */
+
+// --- --- -TODO: Start
+void main() {
+  String name = "Bastian";
+
+  bool me = name.startsWith("ian");
+  bool me2 = name.startsWith("Ba");
 
   print("You name contains Ba?: $me");
   print("You name contains Ba?: $me2");
