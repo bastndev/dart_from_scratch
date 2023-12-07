@@ -8,7 +8,7 @@
 } */
 
 // --- --- -FIXME: Practicing (tru - false)
-void main() {
+/* void main() {
   int number = 4;
 
   bool esPar = number % 2 == 0;
@@ -17,5 +17,19 @@ void main() {
     print('$number The number is even. (par)');
   } else {
     print('$number The number is odd.');
+  }
+} */
+
+void main() {
+  int number = 1;
+
+  number += 10;
+
+  bool esPar = number % 2 == 0;
+
+  if (esPar == true) {
+    print("The number is odd");
+  } else {
+    print("Sorry papi, its no even. (par)");
   }
 }
