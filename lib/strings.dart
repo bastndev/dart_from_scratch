@@ -33,7 +33,7 @@
  */
 
 // --- --- -TODO: Start
-void main() {
+/* void main() {
   String name = "Bastian";
 
   bool me = name.startsWith("ian");
@@ -41,4 +41,12 @@ void main() {
 
   print("You name contains Ba?: $me");
   print("You name contains Ba?: $me2");
+} */
+
+// --- --- -TODO: Plus
+void main() {
+  String name = "Bastian";
+
+  String replacement = name.replaceAll("Bastian", "Gohit");
+  print("Hello my name is $replacement");
 }
