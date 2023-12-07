@@ -32,7 +32,7 @@
 }
  */
 
-void main() {
+/* void main() {
   int a = 23;
   double b = 10.5;
 
@@ -41,4 +41,21 @@ void main() {
 
   print("The number add is: $b");
   print("The number add more number a is: ${a + b}");
+}
+ */
+
+void main() {
+  num number = 10;
+
+  number += 1;
+  print("The number is: $number");
+
+  number -= 1;
+  print("The number is: $number");
+
+  number *= 2;
+  print("The number is: $number");
+
+  number /= 10;
+  print("The number is: $number");
 }
