@@ -8,9 +8,14 @@
 } */
 
 // --- --- -FIXME: Practicing (tru - false)
+void main() {
+  int a = 10;
 
-void main() { 
-  
+  a += 5;
+
+  if (a >= 15) {
+    print("OMG: $a");
+  } else {
+    print("Pls add more value ");
+  }
 }
-
-

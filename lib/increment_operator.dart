@@ -20,7 +20,7 @@
 } */
 
 // --- -- -TODO: Increment
-void main() { 
+/* void main() { 
   int a = 0;
   int b = 0;
 
@@ -29,4 +29,17 @@ void main() {
 
   // ++b;  
   print(--b);
+} */
+
+// --- --- -FIXME: Practicing increment
+void main() {
+  int a = 10;
+
+  a += 5;
+
+  if (a >= 15) {
+    print("OMG: $a");
+  } else {
+    print("Pls add more value ");
+  }
 }
