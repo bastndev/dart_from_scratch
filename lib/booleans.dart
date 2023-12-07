@@ -9,13 +9,13 @@
 
 // --- --- -FIXME: Practicing (tru - false)
 void main() {
-  int a = 10;
+  int number = 4;
 
-  a += 5;
+  bool esPar = number % 2 == 0;
 
-  if (a >= 15) {
-    print("OMG: $a");
+  if (esPar) {
+    print('$number The number is even. (par)');
   } else {
-    print("Pls add more value ");
+    print('$number The number is odd.');
   }
 }
