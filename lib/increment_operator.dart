@@ -19,3 +19,14 @@
   print(++b);
 } */
 
+// --- -- -TODO: Increment
+void main() { 
+  int a = 0;
+  int b = 0;
+
+  // a++;
+  print(a--);
+
+  // ++b;  
+  print(--b);
+}
