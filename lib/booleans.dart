@@ -34,7 +34,7 @@
   }
 } */
 
-void main() {
+/* void main() {
   bool isSunny = true;
   bool hasUmbrella = false;
 
@@ -45,4 +45,18 @@ void main() {
   } else {
     print('You don\'t need to take an umbrella today.');
   }
+} */
+
+/* void main() {
+  bool single = true;
+  bool married = false;
+
+  bool mayer = married && single;
+
+  if (mayer) {
+    print("He is happy ");
+  } else {
+    print("Hi es most happy, ");
+  }
 }
+ */
