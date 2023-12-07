@@ -10,6 +10,12 @@ void main() {
   print("Hello, world!");
   print("Hello, world!");
 
-  double division = a /1;
+  double division = a / 1;
   print(division);
+
+  double result = a + 5.5;
+  print(result);
+
+  result = (10.4 - 1.6) * 3;
+  print(result);
 }
