@@ -9,4 +9,7 @@ void main() {
 
   print("Hello, world!");
   print("Hello, world!");
+
+  double division = a /1;
+  print(division);
 }
