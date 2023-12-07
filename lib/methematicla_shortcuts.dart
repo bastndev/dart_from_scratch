@@ -31,3 +31,14 @@
   print("The sum al number is: ${a + b}");
 }
  */
+
+void main() {
+  int a = 23;
+  double b = 10.5;
+
+  print("The number alone is: $b");
+  b += 90.5;
+
+  print("The number add is: $b");
+  print("The number add more number a is: ${a + b}");
+}
