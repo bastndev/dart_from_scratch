@@ -20,7 +20,7 @@
   }
 } */
 
-void main() {
+/* void main() {
   int number = 1;
 
   number += 10;
@@ -31,5 +31,18 @@ void main() {
     print("The number is odd");
   } else {
     print("Sorry papi, its no even. (par)");
+  }
+} */
+
+void main() {
+  bool isSunny = true;
+  bool hasUmbrella = false;
+
+  bool shouldTakeUmbrella = isSunny && hasUmbrella;
+
+  if (shouldTakeUmbrella) {
+    print('It is sunny, but you should take an umbrella, just in case.');
+  } else {
+    print('You don\'t need to take an umbrella today.');
   }
 }
