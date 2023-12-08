@@ -18,3 +18,21 @@
   }
 }
  */
+
+void main() {
+  double note1, note2, note3;
+
+  note1 = 5.5;
+  note2 = 4.0;
+  note3 = 7.0;
+
+  final sum = (note1 + note2 + note3) / 3;
+
+  if (sum < 5) {
+    print("Sorry you disapproved whit  $sum ");
+  } else if (sum >= 5 && sum <= 7) {
+    print("You approved whit $sum");
+  } else {
+    print("Excellent whit $sum");
+  }
+}
