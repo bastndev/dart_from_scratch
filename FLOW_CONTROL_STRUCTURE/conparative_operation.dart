@@ -24,3 +24,11 @@
   print(name == 'Mario');
 }
  */
+
+void main() {
+  print(true == true);
+  print(true != true);
+  print(false != true);
+  print(false == true);
+  print(true != false);
+}
