@@ -1,5 +1,5 @@
 // both prevent a variable from being reassigned or rewritten
-// -TODO: final - const . cannot be reassigned 
+// -TODO: final - const . cannot be reassigned
 /* void main() { 
   final number = 10;
 
@@ -10,3 +10,9 @@
 } */
 
 // -TODO: final - const . in list
+void main() {
+  final number = [1, 2, 3, 4, 5];
+  number.add(6);
+
+  print(number);
+}
