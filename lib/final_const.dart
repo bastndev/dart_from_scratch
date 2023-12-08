@@ -26,7 +26,7 @@
  */
 
 //--- --- --- -FIXME: Exception
-void main() {
+/* void main() {
   try {
     const number = [1, 2, 3, 4, 5];
     number.add(6);
@@ -34,5 +34,16 @@ void main() {
     print(number);
   } catch (ex) {
     print(ex);
+  }
+} */
+
+void main() {
+  try {
+    const number = [1, 2, 3, 4, 5];
+    number.add(6);
+
+    print(number);
+  } catch (ex) {
+    print('Swap const by final - $ex');
   }
 }
