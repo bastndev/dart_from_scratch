@@ -1,29 +1,29 @@
 import 'dart:math';
 
 void main() {
-  int random = Random().nextInt(6);
+  int random = Random().nextInt(7);
+  print(random);
 
   switch (random) {
     case 0:
-      print('$random Monday');
+      print('Monday');
       break;
     case 1:
-      print('$random Tuesday');
+      print('Tuesday');
       break;
     case 2:
-      print('$random Wednesday');
+      print('Wednesday');
       break;
     case 3:
-      print('$random Thursday');
+      print('Thursday');
       break;
     case 4:
-      print('$random Friday');
+      print('Friday');
       break;
     case 5:
-      print('$random Saturday');
+      print('Saturday');
       break;
-    case 6:
-      print('$random Sunday');
-      break;
+    default:
+      print('Sunday');
   }
 }
