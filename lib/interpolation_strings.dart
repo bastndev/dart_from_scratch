@@ -18,10 +18,18 @@
 } */
 
 // --- -TODO: interpolation 3
-void main() {
+/* void main() {
   int a = 5;
   int b = 10;
 
   String operationSum = '${a + b}';
   print("a + b = $operationSum");
+} */
+
+// --- -TODO: interpolation 4
+void main() {
+  int a = 5;
+  int b = 10;
+
+  print("$a + $b = ${a + b}");
 }
