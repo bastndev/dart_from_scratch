@@ -10,3 +10,9 @@
 } */
 
 // --- --- -FIXME: Before
+void main() {
+  int number = 10;
+
+  bool isPar = number % 2 == 0;
+  print("$number ${isPar ? 'is even' : 'its not even'} ");
+}
