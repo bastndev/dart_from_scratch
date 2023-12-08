@@ -12,4 +12,8 @@ import 'dart:math';
 
 void main() {
   int random = Random().nextInt(20);
+
+  if (random < 10) {
+    print("$random is less than 10");
+  }
 }
