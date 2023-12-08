@@ -14,9 +14,13 @@
 }
  */
 
-void main() {
+/* void main() {
   String name = 'Bastian';
 
-  name = 'Juan';
   print(name == 'Bastian');
+
+  name = 'Juan';
+  print(name != 'Mario');
+  print(name == 'Mario');
 }
+ */
