@@ -27,8 +27,12 @@
   print(doublePe.toStringAsFixed(4));
 } */
 
+// --- --- --- -TODO:
+void main() {
+  String number = '10';
 
-// --- --- --- -TODO: 
-void main() { 
-  
+  print(number.toString());
+  print(int.parse(number));
+  print(double.parse(number));
+  print(num.parse(number));
 }
