@@ -1,8 +1,16 @@
-void main() {
+/* void main() {
   String stringNumber = '10.20';
 
   stringNumber = '10';
 
   int? parsed = int.tryParse(stringNumber);
   print(parsed);
-}
+} */
+
+/* void main() {
+  String stringNumber = '10';
+
+  int? parsed = int.tryParse(stringNumber);
+  print(parsed! + 5);
+} */
+
