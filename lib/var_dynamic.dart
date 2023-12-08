@@ -13,8 +13,23 @@
 }
  */
 
-void main() {
+/* void main() {
   var noValue;
+  print(noValue);
+
+  noValue = 10;
+  print(noValue);
+
+  noValue = 'Hello';
+  print(noValue);
+
+  noValue = false;
+  print(noValue);
+}
+ */
+
+void main() {
+  dynamic noValue;
   print(noValue);
 
   noValue = 10;
