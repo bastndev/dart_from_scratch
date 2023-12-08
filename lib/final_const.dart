@@ -10,9 +10,29 @@
 } */
 
 // -TODO: final - const . in list
-void main() {
+/* void main() {
   final number = [1, 2, 3, 4, 5];
   number.add(6);
 
   print(number);
+}
+ */
+/* void main() {
+  const number = [1, 2, 3, 4, 5];
+  number.add(6);
+
+  print(number);
+}
+ */
+
+//--- --- --- -FIXME: Exception
+void main() {
+  try {
+    const number = [1, 2, 3, 4, 5];
+    number.add(6);
+
+    print(number);
+  } catch (ex) {
+    print(ex);
+  }
 }
