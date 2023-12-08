@@ -27,7 +27,7 @@
   print(doublePe.toStringAsFixed(4));
 } */
 
-// --- --- --- -TODO:
+// --- --- --- -TODO: try - catch
 /* void main() {
   String number = '10';
 
@@ -37,7 +37,7 @@
   print(num.parse(number));
 } */
 
-void main() {
+/* void main() {
   String number = '10.5';
 
   try {
@@ -47,4 +47,14 @@ void main() {
   } catch (e) {
     print("Sorry Pls use int number Thanks | $e");
   }
+}
+ */
+
+void main() {
+  String stringNumber = '10.5';
+
+  stringNumber = '10'; 
+
+  final parsing = int.tryParse(stringNumber);
+  print(parsing);
 }
