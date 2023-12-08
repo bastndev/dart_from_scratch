@@ -1,4 +1,4 @@
-void main() {
+/* void main() {
   int a = 10;
   int b = 10;
   int c = 5;
@@ -11,4 +11,12 @@ void main() {
   print(b >= a);
   print(b != c);
   print(b != a);
+}
+ */
+
+void main() {
+  String name = 'Bastian';
+
+  name = 'Juan';
+  print(name == 'Bastian');
 }
