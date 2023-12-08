@@ -13,6 +13,7 @@
 }
  */
 
+// --- --- -TODO: var
 /* void main() {
   var noValue;
   print(noValue);
@@ -28,8 +29,9 @@
 }
  */
 
-void main() {
-  dynamic noValue;
+// --- --- -TODO: dynamic
+/* void main() {
+  dynamic  noValue;
   print(noValue);
 
   noValue = 10;
@@ -40,4 +42,18 @@ void main() {
 
   noValue = false;
   print(noValue);
-}
+} */
+
+// --- --- -TODO: object (No null)
+void main() {
+  Object  noValue;
+
+  noValue = 10;
+  print(noValue);
+
+  noValue = 'Hello';
+  print(noValue);
+
+  noValue = false;
+  print(noValue);
+} 
