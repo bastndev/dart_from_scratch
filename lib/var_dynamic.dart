@@ -5,3 +5,9 @@
   number = 19.0;
 
 } */
+
+void main() {
+  var string = '10  Hello World';
+
+  print(string);
+}
