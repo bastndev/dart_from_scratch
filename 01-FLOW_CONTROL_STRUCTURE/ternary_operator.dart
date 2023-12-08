@@ -10,9 +10,16 @@
 } */
 
 // --- --- -FIXME: Before
-void main() {
+/* void main() {
   int number = 10;
 
   bool isPar = number % 2 == 0;
   print("$number ${isPar ? 'is even' : 'its not even'} ");
+} */
+
+void main() {
+  int number = 11;
+
+  String isPar = number % 2 == 0 ? 'is even' : "it's not even";
+  print(isPar);
 }
