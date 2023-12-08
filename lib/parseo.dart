@@ -8,7 +8,7 @@
 
 } */
 // --- --- --- -TODO: change of String to int
-void main() { 
+/* void main() {
   final intNumber = 10;
   final doubleNumber = 5.12;
 
@@ -17,6 +17,13 @@ void main() {
 
   print(change1);
   print(change2);
+} */
 
+// --- --- --- -TODO: print double
 
+void main() {
+  final doublePe = 25.1998;
+
+  print(doublePe.toStringAsFixed(2));
+  print(doublePe.toStringAsFixed(4));
 }
