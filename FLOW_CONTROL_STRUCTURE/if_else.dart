@@ -1,4 +1,4 @@
-void main() {
+/* void main() {
   int a = 1;
 
   if (a == 5) {
@@ -7,4 +7,8 @@ void main() {
     print(
         "Sorry bro I can't talk with you for what? \n$a is no equal to my number ");
   }
+} */
+
+void main() { 
+  
 }
