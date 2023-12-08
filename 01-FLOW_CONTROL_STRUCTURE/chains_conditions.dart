@@ -8,7 +8,7 @@
   }
 } */
 
-import 'dart:math';
+/* import 'dart:math';
 
 void main() {
   int random = Random().nextInt(20) + 1;
@@ -22,4 +22,35 @@ void main() {
   } else {
     print("$random is 20");
   }
-}
+} */
+
+// --- --- -TODO: OR ||
+
+/* void main() {
+  String name = 'Ana';
+  bool startNamed = name.startsWith('L');
+  int length = name.length;
+
+  if (length >= 6 || startNamed) {
+    print("$name have 6 characters or start with 'L'");
+  } else if (length <= 5 && !startNamed) {
+    print("$name beautiful name ");
+  } else {
+    print("$name nooooo");
+  }
+} */
+
+// --- --- --- -FIXME: Me
+/* void main() {
+  String name = 'afsadf1212';
+  bool startName = name.startsWith('Lucas');
+  int character = name.length;
+
+  if (character == 5 && startName) {
+    print("Hello Mr. $name");
+  } else if (character < 99 && startName) {
+    print("Beautiful name $name");
+  } else {
+    print("Wtf - $name");
+  }
+} */
