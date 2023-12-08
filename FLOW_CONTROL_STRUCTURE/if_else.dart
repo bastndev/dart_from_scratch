@@ -9,6 +9,14 @@
   }
 } */
 
-void main() { 
-  
+void main() {
+  int a = 10;
+
+  if (a < 5) {
+    print("The number is less than the 5");
+  } else if (a <= 8) {
+    print("The number is equal to 5 and greater than the 8");
+  } else {
+    print("The number is greater than 8");
+  }
 }
