@@ -40,12 +40,11 @@
 void main() {
   String number = '10.5';
 
-  try{
-    
-  print(int.parse(number));
-  print(double.parse(number));
-  print(num.parse(number));
-  }catch(e){
+  try {
+    print(int.parse(number));
+    print(double.parse(number));
+    print(num.parse(number));
+  } catch (e) {
     print("Sorry Pls use int number Thanks | $e");
   }
 }
