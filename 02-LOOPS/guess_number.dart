@@ -116,7 +116,7 @@ void main() {
   } while (!finish);
 } */
 
-import 'dart:io';
+/* import 'dart:io';
 import 'dart:math';
 
 void main() {
@@ -142,5 +142,25 @@ void main() {
 
   if (tries == maxTries) {
     print("You've run out of attempts. The correct number was $random");
+  }
+} */
+
+import 'dart:io';
+
+void main() {
+  stdout.write('What year were you born:');
+  final input = stdin.readLineSync() ?? '';
+  final number = int.tryParse(input);
+
+  if (number == null) {
+    print("That's not a  number");
+  } else {
+    var result = 2023 - number;
+
+    if (result > 18) {
+      print("Eres mayor de edad $result");
+    } else {
+      print("No eres mayor de edad $result");
+    }
   }
 }
