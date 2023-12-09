@@ -24,7 +24,7 @@ import 'dart:io';
 
 void main() {
   stdout.write('Enter first number: ');
-  final input = stdin.readLineSync() ?? '\n';
+  final input = stdin.readLineSync() ?? '';
   final number = int.tryParse(input);
 
   stdout.write('Enter second number: ');
@@ -34,10 +34,10 @@ void main() {
   if (number == null && number2 == null) {
     print("Equal numbers");
   } else if (number != null && number2 != null) {
-    if (number < number2) {
-      print("Second number is more");
-    } else if (number > number2) {
+    if (number > number2) {
       print("First number is more");
+    } else if (number < number2) {
+      print("Second number is more");
     } else {
       print("Numbers are equal");
     }
