@@ -150,17 +150,17 @@ import 'dart:io';
 void main() {
   stdout.write('What year were you born:');
   final input = stdin.readLineSync() ?? '';
-  final number = int.tryParse(input);
+  final year = int.tryParse(input);
 
-  if (number == null) {
-    print("That's not a  number");
+  if (year == null) {
+    print("That's not a  year");
   } else {
-    var result = 2023 - number;
+    final result = 2023 - year;
 
     if (result > 18) {
-      print("Eres mayor de edad $result");
+      print("With $result you're of age");
     } else {
-      print("No eres mayor de edad $result");
+      print("With $result you'rent of age 'Chibolo'");
     }
   }
 }
