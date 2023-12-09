@@ -73,7 +73,7 @@ import 'dart:io';
 }
  */
 
-void main() {
+/* void main() {
   stdout.write('Enter a number: ');
   final input = (stdin.readLineSync() ?? '\n');
   final number = int.tryParse(input);
@@ -82,5 +82,18 @@ void main() {
     print("The number is between 10 and 20");
   } else {
     print("Enter a valid number between 10 and 20");
+  }
+}
+ */
+
+void main() {
+  stdout.write('Enter your name: ');
+  final input = (stdin.readLineSync() ?? '').toLowerCase();
+  final containsG = input.contains('g');
+
+  if (containsG) {
+    print("Your name has the letter 'g'");
+  } else {
+    print("I'm sorry, your name doesn't have the letter 'g'");
   }
 }
