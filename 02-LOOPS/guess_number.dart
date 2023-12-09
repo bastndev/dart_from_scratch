@@ -19,7 +19,7 @@ void main() {
  */
 
 // -- -- AI
-import 'dart:io';
+/* import 'dart:io';
 import 'dart:math';
 
 void main() {
@@ -47,4 +47,17 @@ void main() {
     }
 
   } while (true);
+} */
+
+// -- - Teach
+
+import 'dart:math';
+
+void main() { 
+  bool finish = false;
+  int random = Random().nextInt(20) ;
+
+  do {
+    
+  } while (!finish);
 }
