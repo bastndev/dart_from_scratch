@@ -54,7 +54,7 @@
 //--- --- -TODO: Video
 import 'dart:io';
 
-void main() {
+/* void main() {
   stdout.write('Introduce a lyric: ');
   final input = (stdin.readLineSync() ?? '').toLowerCase();
 
@@ -69,5 +69,18 @@ void main() {
     print("IS a vocal");
   } else {
     print("Is no vocal");
+  }
+}
+ */
+
+void main() {
+  stdout.write('Enter a number: ');
+  final input = (stdin.readLineSync() ?? '\n');
+  final number = int.tryParse(input);
+
+  if (number != null && number >= 10 && number <= 20) {
+    print("The number is between 10 and 20");
+  } else {
+    print("Enter a valid number between 10 and 20");
   }
 }
