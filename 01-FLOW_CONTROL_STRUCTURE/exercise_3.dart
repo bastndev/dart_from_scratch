@@ -45,3 +45,7 @@ import 'dart:io';
     print("That is not a number");
   }
 } */
+
+void main() {
+  stdout.write('Enter fist number: ');
+}
