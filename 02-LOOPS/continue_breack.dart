@@ -85,7 +85,7 @@
 } */
 
 // -- -- God
-void main() {
+/* void main() {
   String phrase = 'Hello my name is Juan';
   List<String> targetWords = ['hello', 'my', 'name', 'Bastian'];
 
@@ -98,6 +98,16 @@ void main() {
   }
 
   if (words.contains('Bastian')) {
+    print("Bastian found!");
+  } else {
+    print("Bastian not found!");
+  }
+}
+ */
+void main() {
+  String phrase = 'Hello my name is Bastian';
+
+  if (phrase.contains('Bastian')) {
     print("Bastian found!");
   } else {
     print("Bastian not found!");
