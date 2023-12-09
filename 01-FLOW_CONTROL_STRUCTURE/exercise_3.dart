@@ -72,7 +72,7 @@ import 'dart:io';
 } */
 
 // --- --- -FIXME: Factorization
-void main() {
+/* void main() {
   stdout.write('Enter fist number: ');
   final numAinput = stdin.readLineSync() ?? '';
   final numA = int.tryParse(numAinput);
@@ -95,4 +95,17 @@ void main() {
       ? 'The number A ($numA) is most that number B ($numB)'
       : 'The number B ($numB) is most that number A ($numA)';
   print(stt);
+} */
+
+void main() {
+  stdout.write('Enter your name: ');
+  final input = stdin.readLineSync();
+
+  if (input != null && input.length > 3) {
+    print("$input beautiful name");
+  } else if (input != null && input.length > 5) {
+    print("OK");
+  } else {
+    print("That is not a valid name");
+  }
 }
