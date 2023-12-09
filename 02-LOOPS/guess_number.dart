@@ -51,20 +51,67 @@ void main() {
 
 // -- - Teach
 
+/* import 'dart:io';
+import 'dart:math';
+
+void main() {
+  bool finish = false;
+  int random = Random().nextInt(5);
+
+  int maxTries = 5;
+  int tries = 0;
+
+  do {
+    stdout.write('Enter a number between 0 to 9: ');
+    final input = stdin.readLineSync() ?? '';
+    final number = int.tryParse(input);
+
+    if (number == null) {
+      print("That's not a number :(");
+    } else if (number == random) {
+      print("Great! Congratulations!!! $random");
+      finish = true;
+      print(" and $tries (y) ");
+    } else {
+      print("keep trying $random");
+      ++tries;
+      if (tries == maxTries) {
+        finish = true;
+        print("You no longer have a balance");
+      }
+    }
+  } while (!finish);
+}
+ */
+
 import 'dart:io';
 import 'dart:math';
 
 void main() {
   bool finish = false;
-  int random = Random().nextInt(20);
+  int random = Random().nextInt(10);
+
+  int maxTries = 5;
+  int tries = 0;
 
   do {
-    stdout.write('Enter a number: ');
+    stdout.write('Enter a number between 0 to 9: ');
     final input = stdin.readLineSync() ?? '';
     final number = int.tryParse(input);
 
     if (number == null) {
-      
+      print("That's not a number :(");
+    } else if (number == random) {
+      ++tries;
+      print("Great! Congratulations!!! $random and $tries (y)");
+      finish = true;
+    } else {
+      ++tries;
+      print("Keep trying");
+      if (tries == maxTries) {
+        finish = true;
+        print("You no longer have attempts");
+      }
     }
   } while (!finish);
 }
