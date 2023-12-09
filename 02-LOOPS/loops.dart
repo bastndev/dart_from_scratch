@@ -4,8 +4,16 @@
   }
 } */
 
-void main() {
+/* void main() {
   for (int i = 0; i < 3; i++) {
     print(i);
   }
 }
+ */
+
+/* void main() {
+  for (int i = 0; i < 3; i++) {
+    print("$i Hello!");
+  }
+}
+ */
