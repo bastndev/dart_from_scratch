@@ -55,3 +55,51 @@
 
   print(newString);
 } */
+
+// --- --- Practice fail
+/* void main() {
+  String phrase = 'Hello my name is Bastian';
+  int length = phrase.length;
+
+  for (int i = 0; i < length; i++) {
+    if (length >= 7 && length.toString() == 'Bastian') {
+      print("Hi Bastian!");
+      break;
+    } else {
+      print("Your name is not Bastian");
+      break;
+    }
+  }
+}
+ */
+
+/* void main() {
+  String phrase = 'Hello my name is Lucas';
+  int length = phrase.length;
+
+  if (length >= 7 && phrase.substring(length - 7) == 'Bastian') {
+    print("Hi Bastian!");
+  } else {
+    print("Your name is not Bastian");
+  }
+} */
+
+// -- -- God
+void main() {
+  String phrase = 'Hello my name is Juan';
+  List<String> targetWords = ['hello', 'my', 'name', 'Bastian'];
+
+  List<String> words = phrase.split(' ');
+
+  for (int i = 0; i < words.length; i++) {
+    if (targetWords.contains(words[i].toLowerCase())) {
+      print("${words[i]} found!");
+    }
+  }
+
+  if (words.contains('Bastian')) {
+    print("Bastian found!");
+  } else {
+    print("Bastian not found!");
+  }
+}
