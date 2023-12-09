@@ -22,7 +22,7 @@ void main() {
 
 import 'dart:io';
 
-void main() {
+/* void main() {
   stdout.write('Enter first number: ');
   final input = stdin.readLineSync() ?? '';
   final number = int.tryParse(input);
@@ -44,4 +44,4 @@ void main() {
   } else {
     print("That is not a number");
   }
-}
+} */
