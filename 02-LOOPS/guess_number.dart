@@ -83,7 +83,7 @@ void main() {
   } while (!finish);
 }
  */
-
+/* 
 import 'dart:io';
 import 'dart:math';
 
@@ -114,4 +114,33 @@ void main() {
       }
     }
   } while (!finish);
+} */
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  final random = Random().nextInt(10);
+  final maxTries = 5;
+  int tries = 0;
+
+  while (tries < maxTries) {
+    stdout.write('Enter a number between 0 to 9: ');
+    final input = stdin.readLineSync() ?? '';
+    final number = int.tryParse(input);
+
+    if (number == null) {
+      print("That's not a number :(");
+    } else if (number == random) {
+      print("Great! Congratulations!!! $random = $input");
+      break;
+    } else {
+      ++tries;
+      print("Keep trying. Tries left: ${maxTries - tries}");
+    }
+  }
+
+  if (tries == maxTries) {
+    print("You've run out of attempts. The correct number was $random");
+  }
 }
