@@ -51,13 +51,20 @@ void main() {
 
 // -- - Teach
 
+import 'dart:io';
 import 'dart:math';
 
-void main() { 
+void main() {
   bool finish = false;
-  int random = Random().nextInt(20) ;
+  int random = Random().nextInt(20);
 
   do {
-    
+    stdout.write('Enter a number: ');
+    final input = stdin.readLineSync() ?? '';
+    final number = int.tryParse(input);
+
+    if (number == null) {
+      
+    }
   } while (!finish);
 }
