@@ -1,4 +1,4 @@
-void main() {
+/* void main() {
   String name = 'Bastian';
   String nameCopy = '';
   int counter = 0;
@@ -9,4 +9,10 @@ void main() {
     counter++;
   }
   print("$name have $counter character");
+} */
+
+void main() {
+  String name = 'Bastian';
+
+  print("$name has ${name.length} characters");
 }
