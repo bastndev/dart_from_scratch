@@ -17,7 +17,7 @@ import 'dart:io';
   }
 } */
 
-void main() {
+/* void main() {
   int level = 5;
   final char = '* ';
 
@@ -29,6 +29,20 @@ void main() {
 
     stdout.write(char * chars);
 
+    print('');
+  }
+}
+ */
+
+void main() {
+  int level = 8;
+  final char = '* ';
+
+  for (int i = 0; i < level; i++) {
+    int space = (level - 1) - i;
+    int chars = level - space;
+
+    stdout.write(' ' * space + char * chars);
     print('');
   }
 }
