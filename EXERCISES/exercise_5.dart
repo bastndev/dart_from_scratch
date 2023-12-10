@@ -1,6 +1,6 @@
 void main() {
-  int width = 7;
-  int height = 4;
+  int width = 5;
+  int height = 2;
   final char = '👽';
 
   for (int i = 0; i < height; i++) {
