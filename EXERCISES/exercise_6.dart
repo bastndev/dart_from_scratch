@@ -93,7 +93,7 @@ import 'dart:io';
   }
 }
  */
-void main() {
+/* void main() {
   int height = 6;
   final char = '*';
 
@@ -106,6 +106,25 @@ void main() {
       stdout.write(char);
     }
 
+    print('');
+  }
+} */
+
+void main() {
+  int level = 8;
+  final char = ' +';
+  final char2 = ' 👽';
+  final char3 = ' * ';
+  final char4 = '💙';
+
+  for (int i = 0; i < level; i++) {
+    int space = (level - 1) - i;
+    int chars = level - space;
+
+    stdout.write(' ' * chars + char * chars);
+    stdout.write(' ' * chars + char2 * chars);
+    stdout.write(' ' * chars + char3 * chars);
+    stdout.write(' ' * chars + char4 * chars);
     print('');
   }
 }
