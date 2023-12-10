@@ -81,7 +81,7 @@ import 'dart:io';
   }
 } */
 
-void main() {
+/* void main() {
   int sideLength = 5;
   final char = ' *';
 
@@ -89,6 +89,23 @@ void main() {
     for (int j = 0; j < sideLength; j++) {
       stdout.write(char);
     }
+    print('');
+  }
+}
+ */
+void main() {
+  int height = 6;
+  final char = '*';
+
+  for (int i = 0; i < height; i++) {
+    for (int j = 0; j < i; j++) {
+      stdout.write(' ');
+    }
+
+    for (int k = 0; k < (2 * (height - i)) - 1; k++) {
+      stdout.write(char);
+    }
+
     print('');
   }
 }
