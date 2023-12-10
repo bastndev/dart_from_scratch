@@ -1,4 +1,4 @@
-void main() {
+/* void main() {
   int width = 5;
   int height = 2;
   final char = '👽';
@@ -7,3 +7,4 @@ void main() {
     print(char * width);
   }
 }
+ */
