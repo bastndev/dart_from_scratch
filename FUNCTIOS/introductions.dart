@@ -10,7 +10,7 @@
   }
 } */
 
-void main(List<String> args) {
+/* void main(List<String> args) {
   String name = 'Bastian';
   bool containsB = name.contains('z');
   
@@ -18,5 +18,23 @@ void main(List<String> args) {
     print("Bastian contains the letter 'B'");
   } else {
     print("Bastian does not contain the letter 'B'");
+  }
+}
+ */
+
+import 'dart:io';
+
+void main(List<String> args) {
+  String name = 'Bastian';
+
+  stdout.write("Enter a letter for verify: ");
+  String letterToCheck = stdin.readLineSync()!.toLowerCase();
+
+  bool containsLetter = name.toLowerCase().contains(letterToCheck);
+
+  if (containsLetter) {
+    print("Bastian carrie letter '$letterToCheck'");
+  } else {
+    print("Bastian does not carrier letter '$letterToCheck");
   }
 }
