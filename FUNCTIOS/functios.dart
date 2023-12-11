@@ -35,7 +35,7 @@ cat() {
 }
  */
 
-void main() {
+/* void main() {
   String have = 'I have a';
   cat(have);
   dog(have);
@@ -47,4 +47,8 @@ cat(String pet) {
 
 dog(String pet) {
   print("$pet Dog");
+} */
+
+void main() { 
+  
 }
