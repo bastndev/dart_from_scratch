@@ -25,3 +25,11 @@ void dog([String x = 'no name']) {
   print("$x Firulais");
 }
  */
+
+void main() {
+  cat();
+}
+
+cat() {
+  print("Cat");
+}
