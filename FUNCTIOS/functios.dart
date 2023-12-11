@@ -49,7 +49,7 @@ dog(String pet) {
   print("$pet Dog");
 } */
 
-void main() {
+/* void main() {
   String input = 'The sum is';
   sum(input);
 }
@@ -59,4 +59,21 @@ void sum(String x) {
   int sum2 = 20;
 
   print("$x ${sum + sum2}");
+}
+ */
+
+void main() {
+  String input = 'He is';
+
+  married(input);
+  single(input);
+
+}
+
+void married(String x) { 
+  print("$x Married");
+}
+
+void single(String y) { 
+  print("$y Single");
 }
