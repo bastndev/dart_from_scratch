@@ -62,7 +62,7 @@ void sum(String x) {
 }
  */
 
-void main() {
+/* void main() {
   String input = 'He is';
 
   married(input);
@@ -76,4 +76,4 @@ void married(String x) {
 
 void single(String y) { 
   print("$y Single");
-}
+} */
