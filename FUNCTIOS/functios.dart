@@ -49,6 +49,14 @@ dog(String pet) {
   print("$pet Dog");
 } */
 
-void main() { 
-  
+void main() {
+  String input = 'The sum is';
+  sum(input);
+}
+
+void sum(String x) {
+  int sum = 10;
+  int sum2 = 20;
+
+  print("$x ${sum + sum2}");
 }
