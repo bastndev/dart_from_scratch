@@ -14,7 +14,7 @@ String reverseString(String srt) {
 }
  */
 
-void main() {
+/* void main() {
   String sentence = 'Hello, How are you ?';
   print(reverseWords(sentence));
 }
@@ -29,3 +29,21 @@ String reverseWords(String sentence) {
 
   return reversedSentence.trim();
 }
+ */
+
+/* void main() {
+  // String str = 'Hello';
+  String reverse = reverseString('Gohit');
+  print(reverse);
+}
+
+reverseString([String str = 'Hello']) {
+  int length = str.length;
+  String reverse = '';
+  for (int i = length - 1; i >= 0; i--) {
+    final char = str[i];
+    reverse += char;
+  }
+  return reverse;
+}
+ */
