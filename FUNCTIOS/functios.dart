@@ -77,3 +77,12 @@ void married(String x) {
 void single(String y) { 
   print("$y Single");
 } */
+/* void main() {
+  final name = 'Bastian';
+  greet(name, 'Gohit');
+}
+
+void greet(String names, [String message = 'Hello']) {
+  print("$message $names");
+}
+ */
