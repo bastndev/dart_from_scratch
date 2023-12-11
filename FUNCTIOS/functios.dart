@@ -86,3 +86,12 @@ void greet(String names, [String message = 'Hello']) {
   print("$message $names");
 }
  */
+
+void main() {
+  // String name = 'Bastian';
+  greet(message: 'Hello', lastName: 'Quispe');
+}
+
+greet({required String message, required String lastName}) {
+  print("$message $lastName");
+}
