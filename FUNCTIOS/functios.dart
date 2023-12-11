@@ -26,10 +26,25 @@ void dog([String x = 'no name']) {
 }
  */
 
-void main() {
+/* void main() {
   cat();
 }
 
 cat() {
   print("Cat");
+}
+ */
+
+void main() {
+  String have = 'I have a';
+  cat(have);
+  dog(have);
+}
+
+cat(String pet) {
+  print("$pet Cat");
+}
+
+dog(String pet) {
+  print("$pet Dog");
 }
