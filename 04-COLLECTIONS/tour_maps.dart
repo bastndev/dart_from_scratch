@@ -1,4 +1,4 @@
-void main() {
+/* void main() {
   Map<String, dynamic> data = {
     'name': 'programming',
     'web': 'http//bastndev.com',
@@ -15,4 +15,4 @@ void main() {
   data.forEach((key, value) {
     print('$key: $value');
   });
-}
+} */
