@@ -35,3 +35,23 @@
     print('${entry.key}: ${entry.value} ');
   }
 } */
+
+void main() {
+  Map<String, dynamic> data = {
+    'name': 'programming',
+    'web': 'http//bastndev.com',
+    'curse': 'dart',
+    'language': ['Dart'],
+    'localization': {
+      'web': 'http://udemy.com',
+      'android': 'apk Udemy',
+      'ios': 'app Udemy',
+    },
+    'price': null,
+  };
+
+  final keys = data.keys;
+  for (final key in keys) {
+    print(data[key]);
+  }
+}
