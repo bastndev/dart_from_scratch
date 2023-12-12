@@ -5,7 +5,7 @@
   print(number);
 } */
 
-void main() {
+/* void main() {
   final numbers = [1, 2, 1, 3, 4, 2, 1];
 
   final number = numbers.firstWhere((element) => element == 4);
@@ -16,4 +16,15 @@ void main() {
     orElse: () => -1,
   );
   print(noNumber);
+}
+ */
+
+void main() {
+  final numbers = [1, 2, 1, 3, 4, 2, 1];
+
+  final lastNumber = numbers.lastWhere(
+    (element) => element == 100,
+    orElse: () => -1,
+  );
+  print(lastNumber);
 }
