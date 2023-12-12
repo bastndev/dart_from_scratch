@@ -80,6 +80,7 @@ void main() {
   } */
 
   int getLength(String name) {
+    // ignore: unused_local_variable
     int ageCopy = age;
     print("Ny name is: $name I'am $age years old");
     ageCopy++;
