@@ -19,5 +19,6 @@ void main() {
   List<int> listA = [1, 2, 3, 4];
   List<int> listB = [1, 2, 3, 4];
 
-  print(listA == listB);
+  List<int> listC = listA;
+  print(listC == listA);
 }
