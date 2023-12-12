@@ -38,7 +38,19 @@ void countTo([int number = 1000000]) {
 
 import 'dart:math';
 
-void main() {}
+void main() {
+  // a(b);
+  a((number) {
+    print("$number The number is generate is a");
+    b(number);
+    b(10);
+  });
+  a((number) => b(number));
+}
+
+void b(int i) {
+  print(i);
+}
 
 void a(Function(int) function) {
   final random = Random().nextInt(20);
