@@ -17,7 +17,7 @@
   });
 } */
 
-void main() {
+/* void main() {
   Map<String, dynamic> data = {
     'name': 'programming',
     'web': 'http//bastndev.com',
@@ -34,4 +34,4 @@ void main() {
   for (MapEntry entry in data.entries) {
     print('${entry.key}: ${entry.value} ');
   }
-}
+} */
