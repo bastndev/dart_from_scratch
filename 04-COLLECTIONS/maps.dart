@@ -60,4 +60,11 @@ void main() {
     'languages': 'spanish',
   });
   print(data);
+
+  //
+  var result = data.putIfAbsent('key', () => 'value');
+  print(result);
+
+  result = data.putIfAbsent('key', () => 'Replace that value');
+  print(result);
 }
