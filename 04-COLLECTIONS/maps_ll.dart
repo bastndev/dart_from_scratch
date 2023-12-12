@@ -12,5 +12,6 @@ void main() {
     'price': null,
   };
 
-  
+  dynamic removeData = data.remove('country');
+  print(removeData);
 }
