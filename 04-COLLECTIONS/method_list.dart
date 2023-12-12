@@ -28,9 +28,22 @@
   print("The 1 to remove: $remove of $numbers");
 } */
 
-void main() {
+/* void main() {
   final numbers = [23, 2, 3, 4, 5];
 
   int number = numbers.removeAt(0);
   print("$number to remove of list: $numbers");
+}
+ */
+
+void main() {
+  final numbers = [23, 2, 3, 4, 5, 6];
+
+  numbers.removeWhere((element) {
+    if (element > 4) {
+      return true;
+    }
+    return false;
+  });
+  print(numbers);
 }
