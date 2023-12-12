@@ -36,7 +36,7 @@
 }
  */
 
-void main() {
+/* void main() {
   final numbers = [23, 2, 3, 4, 5, 6];
 
   numbers.removeWhere((element) {
@@ -47,3 +47,14 @@ void main() {
   });
   print(numbers);
 }
+ */
+
+/* void main() {
+  final numbers = [23, 2, 3, 4, 5, 6];
+
+  numbers.removeWhere((element) {
+    return element > 4;
+  });
+  print(numbers);
+}
+ */
