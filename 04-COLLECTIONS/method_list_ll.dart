@@ -22,7 +22,7 @@ void main() {
 
   numbers.addAll([10, 20, 30]);
 
-  int index = numbers.indexWhere((element) => element > 5);
+  int index = numbers.indexWhere((element) => element > 4);
   print(numbers);
   print('$index corresponds to de the numbers ${numbers[index]} ');
 }
