@@ -1,6 +1,11 @@
 void main() {
   runner(countTo);
 
+  try {
+    runner(trowException);
+  } catch (ex) {
+    print(ex);
+  }
   //Anonymous function ()
   runner(() {
     countTo(20000000);
@@ -10,10 +15,17 @@ void main() {
   runner(() => countTo(20000000));
 }
 
+trowException() {
+  throw Exception('I failed');
+}
+
 void runner(Function function) {
   final start = DateTime.now().millisecondsSinceEpoch;
-
-  function();
+  try {
+    function();
+  } catch (ex) {
+    rethrow;
+  }
 
   final end = DateTime.now().millisecondsSinceEpoch;
   print('Execution time ${end - start} ms');
