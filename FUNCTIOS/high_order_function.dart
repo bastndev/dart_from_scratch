@@ -1,12 +1,12 @@
 void main() {
   runner(countTo);
 
-  //Anonymous function
+  //Anonymous function ()
   runner(() {
     countTo(20000000);
   });
 
-  //Anonymous function arrow
+  //Anonymous function() arrow
   runner(() => countTo(20000000));
 }
 
