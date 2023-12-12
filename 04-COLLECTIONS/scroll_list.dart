@@ -27,10 +27,18 @@
   });
 } */
 
-void main() {
+/* void main() {
   final lyrics = ['a', 'b', 'c'];
 
   lyrics.forEach((element) {
     print(element);
   });
-}
+} */
+
+void main() {
+  final numbers = [10, 20, 30];
+
+  for (var element in numbers) {
+    print(element);
+  }
+} //RECOMMENDED ;)
