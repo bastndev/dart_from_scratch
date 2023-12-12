@@ -1,5 +1,5 @@
 void main() {
-  String str = 'flutter';
+  String str = 'development of apps';
   String reverse = reverseString(str: str);
   print(reverse);
 }
