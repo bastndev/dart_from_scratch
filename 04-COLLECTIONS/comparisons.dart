@@ -20,5 +20,6 @@ void main() {
   List<int> listB = [1, 2, 3, 4];
 
   List<int> listC = listA;
+  // List<int> listD = listB;
   print(listC == listA);
 }
