@@ -1,5 +1,6 @@
 void main() {
-  (name) {
+  final closure = (name) {
     print("Ny name is: $name ");
   };
+  closure('Lucas');
 }
