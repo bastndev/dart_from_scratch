@@ -1,10 +1,10 @@
 void main() {
   String str = 'development of apps';
-  String reverse = reverseString(str: str);
+  String reverse = reverseString(maxReverseLength: 20,str: str);
   print(reverse);
 }
 
-reverseString({required String str, int maxReverseLength = 5}) {
+reverseString({required String str, int maxReverseLength = 20}) {
   int length = str.length;
   String reverse = '';
   int count = 0;
