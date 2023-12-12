@@ -54,11 +54,12 @@ void main() {
 }
  */
 
-void main() {
+// --- -TODO: Increment
+/* void main() {
   int age = 25;
 
   int getLength(String name) {
-    print("Ny name is: $name I'm $age years old");
+    print("Ny name is: $name I'am $age years old");
     age++;
     return name.length;
   }
@@ -67,3 +68,5 @@ void main() {
   print(getLength('Bastian'));
   print(getLength('Bastian'));
 }
+ */
+
