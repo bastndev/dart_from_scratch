@@ -40,5 +40,8 @@ void main() {
     'price': null,
   };
 
-  
+  final newMap = {
+    'name': 'Developers',
+    'curse': 'flutter',
+  };
 }
