@@ -47,7 +47,7 @@
 /* void main() {
   final newMap = {
     'name': 'Developers',
-    'curse': 'flutter',
+    'course': 'flutter',
   };
 
   newMap['name'] = 'new map';
@@ -66,7 +66,7 @@
 /* void main() {
   final newMap = {
     'name': 'Developers',
-    'curse': 'flutter',
+    'course': 'flutter',
   };
 
   newMap.updateAll((key, value) => value = 'Update 2023');
@@ -74,15 +74,30 @@
 }
  */
 
-void main() {
+/* void main() {
   final newMap = {
     'name': 'Developers',
-    'curse': 'flutter',
+    'course': 'flutter',
   };
 
   newMap.updateAll((key, value) {
     if (key == 'name') {
       return 'Name update';
+    }
+    return value;
+  });
+  print(newMap);
+} */
+
+void main() {
+  final newMap = {
+    'name': 'Developers',
+    'course': 'flutter',
+  };
+
+  newMap.updateAll((key, value) {
+    if (key == 'curse') {
+      return 'update course';
     }
     return value;
   });
