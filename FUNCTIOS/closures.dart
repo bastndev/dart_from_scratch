@@ -44,11 +44,26 @@ void main() {
 }
  */
 
-void main() {
+/* void main() {
   int getLength(String name) {
     print("Ny name is: $name");
     return name.length;
   }
 
+  print(getLength('Bastian'));
+}
+ */
+
+void main() {
+  int age = 25;
+
+  int getLength(String name) {
+    print("Ny name is: $name I'm $age years old");
+    age++;
+    return name.length;
+  }
+
+  print(getLength('Bastian'));
+  print(getLength('Bastian'));
   print(getLength('Bastian'));
 }
