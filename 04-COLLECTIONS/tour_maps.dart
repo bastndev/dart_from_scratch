@@ -11,5 +11,8 @@ void main() {
     },
     'price': null,
   };
-  print(data);
+
+  data.forEach((key, value) {
+    print('$key: $value');
+  });
 }
