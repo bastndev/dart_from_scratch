@@ -20,4 +20,7 @@ void main() {
 
   data.removeWhere((key, value) => '$value'.contains('http'));
   print(data);
+
+  data.removeWhere((key, value) => value == null);
+  print(data);
 }
