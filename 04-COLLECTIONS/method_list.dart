@@ -21,9 +21,16 @@
 
 // --- --- -TODO: Delete numbers
 
-void main() {
+/* void main() {
   final numbers = [1, 2, 3, 4, 5, 23];
 
   bool remove = numbers.remove(23);
   print("The 1 to remove: $remove of $numbers");
+} */
+
+void main() {
+  final numbers = [1, 2, 3, 4, 5, 23];
+
+  numbers.removeAt(3);
+  print("The number 4 to remove of list: $numbers");
 }
