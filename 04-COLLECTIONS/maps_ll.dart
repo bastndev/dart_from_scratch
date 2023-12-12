@@ -43,7 +43,8 @@
 }
  */
 
-void main() {
+// --- --- --- change name
+/* void main() {
   final newMap = {
     'name': 'Developers',
     'curse': 'flutter',
@@ -51,4 +52,13 @@ void main() {
 
   newMap['name'] = 'new map';
   print(newMap);
+
+  String updateValue = newMap.update(
+    'key',
+    (value) => 'Not exist',
+    ifAbsent: () => 'NULL',
+  );
+  print(updateValue);
+  print(newMap);
 }
+ */
