@@ -73,13 +73,20 @@ void main() {
 void main() {
   int age = 25;
 
-  int getLength(String name, int age) {
+/*   int getLength(String name, int age) {
     print("Ny name is: $name I'am $age years old");
     age++;
     return name.length;
+  } */
+
+  int getLength(String name) {
+    int ageCopy = age;
+    print("Ny name is: $name I'am $age years old");
+    ageCopy++;
+    return name.length;
   }
 
-  print(getLength('Bastian', age));
-  print(getLength('Bastian', age));
-  print(getLength('Bastian', age));
+  print(getLength('Bastian'));
+  print(getLength('Bastian'));
+  print(getLength('Bastian'));
 }
