@@ -34,7 +34,6 @@ void main() {
 
   final containsProgramming = data.containsValue('programming');
   print(containsProgramming);
-  
 
   final contains = data.containsValue(['Dart']);
   print(contains);
@@ -47,4 +46,18 @@ void main() {
 
   final country = data['country'];
   print(country);
+
+  data['country'] = 'Peru';
+  print(data);
+
+  //Replace
+  data.addAll({
+    'language': 'spanish',
+  });
+  print(data);
+  //change or add something new
+  data.addAll({
+    'languages': 'spanish',
+  });
+  print(data);
 }
