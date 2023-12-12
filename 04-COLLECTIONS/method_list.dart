@@ -5,9 +5,16 @@
   print("The 6 add to list: $list");
 } */
 
-void main() {
+/* void main() {
   final list = [1, 2, 3, 4, 5];
 
   list.insert(5, 5);
   print("The 5 add to list: $list");
+} */
+
+void main() {
+  final list = [1, 2, 3, 4, 5];
+
+  list.addAll([6, 7, 8, 9, 10]);
+  print("The all add to list: $list");
 }
