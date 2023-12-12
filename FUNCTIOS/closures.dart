@@ -34,11 +34,11 @@ void main() {
   locura('Locura');
 } */
 
-int getLength(String name) {
-  print("Ny name is: $name ");
-  return name.length;
-}
-
 void main() {
-  
+  int getLength(String name) {
+    print("Ny name is: $name");
+    return name.length;
+  }
+
+  print(getLength('Lucas'));
 }
