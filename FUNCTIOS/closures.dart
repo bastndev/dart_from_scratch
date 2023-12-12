@@ -29,4 +29,7 @@ void main() {
   closure('Lucas');
   print(closure);
   print(getLength);
+
+  final locura = getLength;
+  locura('Locura');
 }
