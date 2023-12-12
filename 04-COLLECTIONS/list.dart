@@ -19,8 +19,17 @@
 }
  */
 
-void main() {
+/* void main() {
   List<String> vocals = ['a', 'e', 'i', 'o', 'u'];
 
   print(vocals[3]);
+}
+ */
+
+void main() { 
+  List<dynamic> all = ['a', 2, null, (){
+    print("Hello");
+  }];
+
+  print(all);
 }
