@@ -17,5 +17,7 @@ void main() {
 
   dynamic removeData2 = data.remove('web');
   print(removeData2);
-  
+
+  data.removeWhere((key, value) => '$value'.contains('http'));
+  print(data);
 }
