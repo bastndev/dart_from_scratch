@@ -16,7 +16,7 @@
 }
  */
 
-int getLength(String name) {
+/* int getLength(String name) {
   print("Ny name is: $name ");
   return name.length;
 }
@@ -32,4 +32,13 @@ void main() {
 
   final locura = getLength;
   locura('Locura');
+} */
+
+int getLength(String name) {
+  print("Ny name is: $name ");
+  return name.length;
+}
+
+void main() {
+  
 }
