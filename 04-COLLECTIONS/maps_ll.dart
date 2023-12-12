@@ -14,4 +14,8 @@ void main() {
 
   dynamic removeData = data.remove('country');
   print(removeData);
+
+  dynamic removeData2 = data.remove('web');
+  print(removeData2);
+  
 }
