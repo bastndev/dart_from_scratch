@@ -36,9 +36,13 @@ void countTo([int number = 1000000]) {
 }
  */
 
-void main() {
-  runner(countTo);
+import 'dart:math';
 
+void main() {}
+
+void a(Function(int) function) {
+  final random = Random().nextInt(20);
+  function(random);
 }
 
 void runner(Function function) {
