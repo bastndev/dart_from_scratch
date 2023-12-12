@@ -29,8 +29,8 @@
 } */
 
 void main() {
-  final numbers = [1, 2, 3, 4, 5, 23];
+  final numbers = [23, 2, 3, 4, 5];
 
-  numbers.removeAt(3);
-  print("The number 4 to remove of list: $numbers");
+  int number = numbers.removeAt(0);
+  print("$number to remove of list: $numbers");
 }
