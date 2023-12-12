@@ -62,3 +62,13 @@
   print(newMap);
 }
  */
+
+void main() {
+  final newMap = {
+    'name': 'Developers',
+    'curse': 'flutter',
+  };
+
+  newMap.updateAll((key, value) => value = 'Update 2023');
+  print(newMap);
+}
