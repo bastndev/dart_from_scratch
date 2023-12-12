@@ -18,3 +18,9 @@
   print(numbers);
 }
  */
+
+void main() {
+  List<String> vocals = ['a', 'e', 'i', 'o', 'u'];
+
+  print(vocals[3]);
+}
