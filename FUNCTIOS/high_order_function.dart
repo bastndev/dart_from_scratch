@@ -1,4 +1,4 @@
-void main() {
+/* void main() {
   runner(countTo);
 
   try {
@@ -17,6 +17,28 @@ void main() {
 
 trowException() {
   throw Exception('I failed');
+}
+
+void runner(Function function) {
+  final start = DateTime.now().millisecondsSinceEpoch;
+  try {
+    function();
+  } catch (ex) {
+    rethrow;
+  }
+
+  final end = DateTime.now().millisecondsSinceEpoch;
+  print('Execution time ${end - start} ms');
+}
+
+void countTo([int number = 1000000]) {
+  for (int i = 0; i < number; i++) {}
+}
+ */
+
+void main() {
+  runner(countTo);
+
 }
 
 void runner(Function function) {
