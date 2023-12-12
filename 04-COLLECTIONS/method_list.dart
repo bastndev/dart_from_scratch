@@ -58,3 +58,10 @@
   print(numbers);
 }
  */
+
+void main() {
+  final numbers = [23, 2, 3, 4, 5, 6];
+
+  numbers.removeWhere((element) => element > 4);
+  print(numbers);
+}
