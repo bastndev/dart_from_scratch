@@ -73,3 +73,18 @@
   print(newMap);
 }
  */
+
+void main() {
+  final newMap = {
+    'name': 'Developers',
+    'curse': 'flutter',
+  };
+
+  newMap.updateAll((key, value) {
+    if (key == 'name') {
+      return 'Name update';
+    }
+    return value;
+  });
+  print(newMap);
+}
