@@ -27,21 +27,25 @@ String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
   final separator = ':';
   final keys = map.keys;
 
-  final green = '\u001b[32m]';
-  final yellow = '\u001b[33m]';
-  final reset = '\u001b[0m]';
+  final green = '\u001b[32m';
+  final yellow = '\u001b[33m';
+  final reset = '\u001b[0m';
 
   String str = openChar;
   for (final key in keys) {
     final value = map[key];
     if (value is Map) {
-      str += spaces * level + key + separator;
+      str += spaces * level + yellow + key + separator + reset;
       str += makeMapPrettier(value, level + 1);
     } else {
       str += spaces * level +
+          yellow +
           key +
           separator +
+          reset +
+          green +
           value.toString() +
+          reset +
           comma +
           lineJump;
     }
