@@ -18,7 +18,7 @@ void main() {
   makeMapPrettier(data);
 }
 
-String makeMapPrettier(Map<String, dynamic> map) {
+String makeMapPrettier(Map<dynamic, dynamic> map) {
   final lineJump = '\n';
   final openChar = '{$lineJump';
   final closeChar = '$lineJump}';
@@ -30,6 +30,8 @@ String makeMapPrettier(Map<String, dynamic> map) {
   for (final key in keys) {
     final value = map[key];
     if (value is Map) {
+      str += key + separator;
+      str += makeMapPrettier(value);
     } else {
       str += key + separator + value.toString() + comma + lineJump;
     }
