@@ -11,9 +11,9 @@ class Product {
     required this.suppliers,
     required this.price,
   });
-
 }
 
-void main() { 
-  
+void main() {
+  final proof = Product(id: 'id', name: 'name', price: 300, suppliers: []);
+  proof._quantity;
 }
