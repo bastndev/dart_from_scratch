@@ -32,7 +32,7 @@ String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
     final value = map[key];
     if (value is Map) {
       str += key + separator;
-      str += makeMapPrettier(value);
+      str += makeMapPrettier(value, level + 1);
     } else {
       str += key + separator + value.toString() + comma + lineJump;
     }
