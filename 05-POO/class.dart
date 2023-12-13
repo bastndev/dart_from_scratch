@@ -16,6 +16,7 @@
   late num price;
 } */
 
+// builder
 class Product {
   String name;
   num price;
