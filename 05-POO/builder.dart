@@ -39,13 +39,12 @@ class Product {
   num price;
   int quantity;
 
-  Product({
-    required this.id,
-    required this.name,
-    required this.suppliers,
-    this.quantity = 0,
-    required this.price,
-  });
+  Product(
+      {required this.id,
+      required this.name,
+      required this.price,
+      this.quantity = 0,
+      required this.suppliers});
 
   Product.empty({
     this.id = '',
@@ -57,22 +56,47 @@ class Product {
 
   //--- --- -TODO: build factory - need return
   factory Product.fromMap(Map<String, dynamic> map) {
-    return Product(
-      id: map['id'],
-      quantity: map['quantity'],
-      name: map['name'],
-      price: map['price'],
-      suppliers: [],
-    );
+    try {
+      return Product(
+        id: map['id'],
+        quantity: int.parse(map['quantity']),
+        name: map['name'],
+        price: map['price'] != null && map['price'] != ''
+            ? num.parse(map['price'])
+            : 0,
+        suppliers: [],
+      );
+    } catch (e) {
+      return Product(
+        id: map['id'],
+        quantity: int.parse(map['quantity']),
+        name: map['name'],
+        price: 0,
+        suppliers: [],
+      );
+    }
   }
 
   @override
   String toString() {
-    return 'Product(id: $id, name: $name, supplier: $suppliers, quantity: $quantity)';
+    return 'Product(id: $id, name: $name, supplier: $suppliers,price: $price, quantity: $quantity)';
   }
 }
 
 void main() {
   final car = Product(name: 'BMW', price: 40000, suppliers: [], id: '1');
   print(car);
+
+  final empty = Product.empty();
+  print(empty);
+
+  final map = {
+    'id': '001',
+    'name': 'ford',
+    'price': '299.99',
+    'quantity': '10',
+  };
+
+  final sale = Product.fromMap(map);
+  print(sale);
 }
