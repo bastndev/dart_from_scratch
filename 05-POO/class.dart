@@ -1,1 +1,1 @@
-//--- --- -TODO: 
+//--- --- -TODO: class "object creation templates"
