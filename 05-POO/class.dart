@@ -1,7 +1,12 @@
 //--- --- -TODO: class "object creation templates"
-class Product {
+/* class Product {
   String name = '';
   num price = 0;
+} */
+
+class Product {
+  String? name;
+  num? price;
 }
 
 void main() {}
