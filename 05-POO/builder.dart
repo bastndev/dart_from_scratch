@@ -24,7 +24,7 @@ void main() {
   print(suppliers);
   print(car.suppliers);
 
-// Copy no replace
+// Copy no replace or add
   final suppliersCopy = [...suppliers];
   suppliersCopy.add('b');
   print(suppliers);
