@@ -19,7 +19,7 @@ void main() {
 }
 
 String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
-  final spaces = '';
+  final spaces = '  ';
   final lineJump = '\n';
   final openChar = '{$lineJump';
   final closeChar = '$lineJump${spaces * (level -1)}}';
