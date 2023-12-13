@@ -16,4 +16,17 @@ class Product {
   // Product(this.name, this.price);
 }
 
-void main() {}
+void main() {
+  final car = Product(name: 'BMW', suppliers: ['333'], price: 40000, id: '1');
+
+  final suppliers = car.suppliers;
+  suppliers.add('a');
+  print(suppliers);
+  print(car.suppliers);
+
+// Copy no replace
+  final suppliersCopy = [...suppliers];
+  suppliersCopy.add('b');
+  print(suppliers);
+  print(suppliersCopy);
+}
