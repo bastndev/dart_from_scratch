@@ -15,7 +15,7 @@ void main() {
       }
     }
   };
-  makeMapPrettier(data);
+  print(makeMapPrettier(data));
 }
 
 String makeMapPrettier(Map<dynamic, dynamic> map) {
@@ -37,6 +37,5 @@ String makeMapPrettier(Map<dynamic, dynamic> map) {
     }
   }
   str += closeChar;
-  print(str);
   return str;
 }
