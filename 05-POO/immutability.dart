@@ -13,3 +13,8 @@ class Product {
 
   Product(this.name, this.price);
 }
+
+void main() {
+  final car = Product('BMW', 17000);
+  print(car.name);
+}
