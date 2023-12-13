@@ -22,7 +22,7 @@ String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
   final spaces = '';
   final lineJump = '\n';
   final openChar = '{$lineJump';
-  final closeChar = '$lineJump}';
+  final closeChar = '$lineJump${spaces * (level -1)}}';
   final comma = ',';
   final separator = ':';
   final keys = map.keys;
@@ -31,10 +31,15 @@ String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
   for (final key in keys) {
     final value = map[key];
     if (value is Map) {
-      str += key + separator;
+      str += spaces * level + key + separator;
       str += makeMapPrettier(value, level + 1);
     } else {
-      str += key + separator + value.toString() + comma + lineJump;
+      str += spaces * level +
+          key +
+          separator +
+          value.toString() +
+          comma +
+          lineJump;
     }
   }
   str += closeChar;
