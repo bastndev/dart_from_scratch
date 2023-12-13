@@ -1,10 +1,8 @@
 class Product {
   Product(this.name, this.price); // builder product
 
-  String name;
-  num price;
+  String name; // variable
+  num price; // variable
 }
 
-void main() {
-  
-}
+void main() {}
