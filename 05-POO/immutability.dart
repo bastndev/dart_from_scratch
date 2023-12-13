@@ -11,7 +11,7 @@ class Product {
   final String name;
   final num price;
 
-  Product(this.name, this.price);
+  const Product(this.name, this.price);
 }
 
 void main() {
