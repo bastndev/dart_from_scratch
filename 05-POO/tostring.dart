@@ -11,6 +11,11 @@ class Product {
       required this.price,
       this.quantity = 0,
       required this.suppliers});
+
+  @override
+  String toString() {
+    return 'Product(id: $id, name: $name, supplier: $suppliers, quantity: $quantity)';
+  }
 }
 
 void main() {
