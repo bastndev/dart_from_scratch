@@ -55,6 +55,7 @@ class Product {
     this.suppliers = const [],
   });
 
+  //--- --- -TODO: build factory - need return
   factory Product.fromMap(Map<String, dynamic> map) {
     return Product(
       id: map['id'],
@@ -64,19 +65,14 @@ class Product {
       suppliers: [],
     );
   }
+
+  @override
+  String toString() {
+    return 'Product(id: $id, name: $name, supplier: $suppliers, quantity: $quantity)';
+  }
 }
 
 void main() {
-  final car = Product(name: 'BMW', suppliers: ['333'], price: 40000, id: '1');
-
-  final suppliers = car.suppliers;
-  suppliers.add('a');
-  print(suppliers);
-  print(car.suppliers);
-
-// Copy no replace or add
-  final suppliersCopy = [...suppliers];
-  suppliersCopy.add('b');
-  print(suppliers);
-  print(suppliersCopy);
+  final car = Product(name: 'BMW', price: 40000, suppliers: [], id: '1');
+  print(car);
 }
