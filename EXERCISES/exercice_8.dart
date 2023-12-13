@@ -27,8 +27,8 @@ String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
   final separator = ':';
   final keys = map.keys;
 
-  final green = '\u001b[32m';
-  final yellow = '\u001b[33m';
+  final green = '\u001b[33m';
+  final yellow = '\u001b[35m';
   final reset = '\u001b[0m';
 
   String str = openChar;
