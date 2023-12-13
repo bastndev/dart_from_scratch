@@ -21,15 +21,16 @@ void main() {
 String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
   final spaces = '  ';
   final lineJump = '\n';
-  final openChar = '{$lineJump';
-  final closeChar = '$lineJump${spaces * (level - 1)}}';
-  final comma = ',';
   final separator = ':';
   final keys = map.keys;
+  final comma = ',';
 
   final green = '\u001b[33m';
   final yellow = '\u001b[35m';
   final reset = '\u001b[0m';
+  final blue = '\u001b[36m';
+  final openChar = '$blue{$lineJump$reset';
+  final closeChar = '$lineJump${spaces * (level - 1)}$blue}$reset';
 
   String str = openChar;
   for (final key in keys) {
