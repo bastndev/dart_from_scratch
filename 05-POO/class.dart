@@ -9,8 +9,16 @@
   num? price;
 } */
 
-class Product {
+/* class Product {
   late String name;
   late num price;
+} */
+
+class Product {
+  String name;
+  num price;
+
+  Product(this.name, this.price);
 }
+
 void main() {}
