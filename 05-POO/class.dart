@@ -16,7 +16,7 @@
   late num price;
 } */
 
-// builder
+// builder - constructor
 class Product {
   String name;
   num price;
@@ -24,4 +24,9 @@ class Product {
   Product(this.name, this.price);
 }
 
-void main() {}
+void main() {
+  final pc = Product('MackBook', 1700);
+  final car = Product('BMW', 40000);
+  print(car.name);
+  print(pc.price);
+}
