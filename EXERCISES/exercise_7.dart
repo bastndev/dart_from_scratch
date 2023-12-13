@@ -18,7 +18,8 @@ void main() {
   print(makeMapPrettier(data));
 }
 
-String makeMapPrettier(Map<dynamic, dynamic> map) {
+String makeMapPrettier(Map<dynamic, dynamic> map, [int level = 1]) {
+  final spaces = '';
   final lineJump = '\n';
   final openChar = '{$lineJump';
   final closeChar = '$lineJump}';
