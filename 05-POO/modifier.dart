@@ -46,19 +46,17 @@ void main() {
 class B implements A {
   @override
   a() {
-    // TODO: implement a
+    // 
     throw UnimplementedError();
   }
 
   @override
   b() {
-    // TODO: implement b
     throw UnimplementedError();
   }
 
   @override
   c() {
-    // TODO: implement c
     throw UnimplementedError();
   }
 }
@@ -66,19 +64,19 @@ class B implements A {
 class C extends A {
   @override
   a() {
-    // TODO: implement a
+    // -TODO: implement a
     throw UnimplementedError();
   }
 
   @override
   b() {
-    // TODO: implement b
+    // -TODO: implement b
     throw UnimplementedError();
   }
 
   @override
   c() {
-    // TODO: implement c
+    // -TODO: implement c
     throw UnimplementedError();
   }
 }
