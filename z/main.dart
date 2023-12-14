@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   bool finishProgram = false;
 
@@ -11,5 +13,24 @@ void main() {
     print('\t6 Subtract quantity to Products');
     print('\t7 End program');
     print('choose an option \r');
+
+    String option = stdin.readLineSync() ?? '';
+    switch (option) {
+      case "1":
+        break;
+      case "2":
+        break;
+      case "3":
+        break;
+      case "4":
+        break;
+      case "5":
+        break;
+      case "6":
+        break;
+      case "7":
+        finishProgram = true;
+        break;
+    }
   } while (!finishProgram);
 }

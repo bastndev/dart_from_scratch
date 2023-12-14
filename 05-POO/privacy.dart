@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_getters_setters
+
 /* class Product {
   final String id;
   final String name;

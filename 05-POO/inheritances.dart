@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_overrides
+
 abstract class Person {
   String id;
   String name;
