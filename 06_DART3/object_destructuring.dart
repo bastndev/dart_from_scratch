@@ -6,5 +6,8 @@ class User {
 }
 
 void main() { 
-  
+  final user = User('example@gmail.com');
+
+  var User(:id, :email)= user;
+  print('$id have the email: $email');
 }
