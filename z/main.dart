@@ -56,13 +56,30 @@ void main() {
         controller.deleteById(id);
         break;
       case "4":
-      print("Enter the name of product");
+        print("Search name products");
         String name = stdin.readLineSync() ?? '';
-        controller.addProduct(name);
+        final products = controller.searchName(name);
+        for (final p in products) {
+          print(p);
+        }
         break;
       case "5":
+        print("Enter id products");
+        String id = stdin.readLineSync() ?? '';
+        print("Enter id products");
+        String quantityString = stdin.readLineSync() ?? '';
+
+        int? quantity = int.tryParse(quantityString);
+        if (quantity != null) {}
         break;
       case "6":
+        print("Enter id products");
+        String id = stdin.readLineSync() ?? '';
+        print("Enter id products");
+        String quantityString = stdin.readLineSync() ?? '';
+
+        int? quantity = int.tryParse(quantityString);
+        if (quantity != null) {}
         break;
       case "7":
         finishProgram = true;
