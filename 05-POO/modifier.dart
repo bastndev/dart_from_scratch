@@ -6,13 +6,23 @@ class C implements A{}
 void main() { 
 } */
 
-//abstract inheritances 
-base class A {}
+//abstract inheritances
+/* base class A {}
 
 base class B extends A{}
 final class C implements A{}
 sealed class D extends A{}
 
 void main() { 
-  
+  final a = A();
+} */
+
+//interface
+interface class A {}
+
+class B extends A {}
+class C implements A {}
+
+void main() {
+  // final a = A();
 }
