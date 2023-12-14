@@ -66,20 +66,29 @@ void main() {
       case "5":
         print("Enter id products");
         String id = stdin.readLineSync() ?? '';
-        print("Enter id products");
+        print("Enter The quantity of products");
         String quantityString = stdin.readLineSync() ?? '';
 
         int? quantity = int.tryParse(quantityString);
-        if (quantity != null) {}
+        if (quantity != null) {
+          controller.addQuantity(id, quantity);
+        }
         break;
       case "6":
         print("Enter id products");
         String id = stdin.readLineSync() ?? '';
-        print("Enter id products");
+        print("Enter The quantity of products: ");
         String quantityString = stdin.readLineSync() ?? '';
 
         int? quantity = int.tryParse(quantityString);
-        if (quantity != null) {}
+        if (quantity != null) {
+          bool success = controller.subtractAmount(id, quantity);
+          if (success) {
+            print("$quantity units have been successfully added");
+          } else {
+            print("sorry we don't have add $quantity units");
+          }
+        }
         break;
       case "7":
         finishProgram = true;

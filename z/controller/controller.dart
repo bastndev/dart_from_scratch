@@ -27,4 +27,25 @@ class Controller {
             (element) => element.name.toLowerCase().contains(str.toLowerCase()))
         .toList();
   }
+
+  void addQuantity(String id, int qty) {
+    try {
+      final products =
+          storeHouse.products.firstWhere((element) => element.id == id);
+      products.sum(qty);
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  bool subtractAmount(String id, int qty) {
+    try {
+      final products = storeHouse.products.firstWhere(
+        (element) => element.id == id,
+      );
+      return products.subtract(qty);
+    } catch (e) {
+      return false;
+    }
+  }
 }
