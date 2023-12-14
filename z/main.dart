@@ -42,12 +42,23 @@ void main() {
     String option = stdin.readLineSync() ?? '';
     switch (option) {
       case "1":
+        controller.getProducts();
         break;
       case "2":
+        print("add new product");
+        String name = stdin.readLineSync() ?? '';
+        final prod = Products(id: const Uuid().v4(), name: name, price: 99.00);
+        controller.addProduct(prod);
         break;
       case "3":
+        print("Enter the product ID");
+        String id = stdin.readLineSync() ?? '';
+        controller.deleteById(id);
         break;
       case "4":
+      print("Enter the name of product");
+        String name = stdin.readLineSync() ?? '';
+        controller.addProduct(name);
         break;
       case "5":
         break;
