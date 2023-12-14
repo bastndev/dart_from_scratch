@@ -32,7 +32,7 @@ void main() {
  */
 
 //builded nombrado
-class Product {
+/* class Product {
   final String id;
   final String name;
   final List<String> suppliers;
@@ -100,3 +100,4 @@ void main() {
   final sale = Product.fromMap(map);
   print(sale);
 }
+ */
