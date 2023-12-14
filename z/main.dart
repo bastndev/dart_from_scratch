@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'controller/controller.dart';
 import 'models/products.dart';
 import 'package:uuid/uuid.dart';
 
@@ -22,6 +23,8 @@ void main() {
 
   final storeHouse = StoreHouse(
       id: const Uuid().v4(), name: 'Store House 1', products: [mouse, pc]);
+
+  final controller = Controller(storeHouse);
 
   bool finishProgram = false;
 
