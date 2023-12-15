@@ -8,3 +8,14 @@
 }
  */
 
+void main() {
+  try {
+    final result = parse();
+  } catch (e) {
+    print(e);
+  }
+}
+
+int parse(){
+  return int.parse('Hello ');
+}
