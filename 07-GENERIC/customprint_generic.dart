@@ -10,6 +10,13 @@ enum Color {
 
 void main() {}
 
+class CustomPrint {
+  final String text;
+  final PrintStyle? style;
+
+  CustomPrint(this.text, {this.style});
+}
+
 class PrintStyle {
   final PrintAttribute<Color>? color;
   final PrintAttribute<int>? separation;
