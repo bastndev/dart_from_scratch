@@ -8,6 +8,19 @@ enum Color {
   const Color(this.code);
 }
 
-void main() {
-  
+void main() {}
+
+class PrintStyle {
+  final PrintAttribute<Color>? color;
+  final PrintAttribute<int>? separation;
+
+  PrintStyle({this.color, this.separation});
+}
+
+class PrintAttribute<T> {
+  final T property;
+  PrintAttribute._(this.property);
+
+  static PrintAttribute<T> changeProperty<T>(T property) =>
+      PrintAttribute._(property);
 }
