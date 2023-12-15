@@ -21,6 +21,6 @@ class Sum {
 }
 
 void main() {
-  final sum = Sum(age: 12, name: 'Bastian');
-  print("Hello my name is ${sum.name} ");
+  final sum = Sum(age: 25, name: 'Bastian');
+  print("Hello my name is ${sum.name} and I'm ${sum.age} ");
 }
