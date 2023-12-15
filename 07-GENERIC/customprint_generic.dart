@@ -8,7 +8,10 @@ enum Color {
   const Color(this.code);
 }
 
-void main() {}
+void main() {
+  var customPrint = CustomPrint(text: 'Print to screen');
+  customPrint.write();
+}
 
 class CustomPrint {
   static const reset = '\u001B[0m';
@@ -27,6 +30,9 @@ class CustomPrint {
   void write() {
     String str = '';
     String colorCode = style?.color?.property.code ?? '';
+    bool hasSeparation = (style != null) && (style?.separation != null);
+    str = hasSeparation ? _createSpace() : text;
+    print('$colorCode $str $reset');
   }
 }
 
