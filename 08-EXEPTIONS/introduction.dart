@@ -8,7 +8,7 @@
 }
  */
 
-void main() {
+/* void main() {
   try {
     final result = parse();
   } catch (e) {
@@ -18,4 +18,21 @@ void main() {
 
 int parse(){
   return int.parse('Hello ');
+} */
+
+void main() {
+  try {
+    final result = parse();
+    print(result);
+  } catch (e) {
+    print(e);
+  }
+}
+
+int parse() {
+  try {
+    return int.parse('Hello ');
+  } catch (e) {
+    return 0;
+  }
 }
