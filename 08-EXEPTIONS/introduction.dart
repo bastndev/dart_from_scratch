@@ -149,7 +149,7 @@ int parse(String str, int a) {
 }
  */
 
-void main() {
+/* void main() {
   try {
     final result = parse('Hello', 1);
     print(result);
@@ -162,6 +162,31 @@ void main() {
 
 int parse(String str, int a) {
   try {
+    return int.parse(str) ~/ a;
+  } catch (_) {
+    // throw Exception("could not be parsed");
+    rethrow;
+  }
+} */
+
+void main() {
+  try {
+    final result = parse('Hello', 5);
+    print(result);
+  } on IntegerDivisionByZeroException catch (e) {
+    print("one as ocurred IntegerDivisionByZeroException $e");
+  } on FormatException catch (e) {
+    print('FormatException $e');
+  } catch (e) {
+    print(e);
+  }
+}
+
+int parse(String str, int a) {
+  try {
+    if (a >= 5) {
+      throw 'cannot be divided by a number equal to or greater than 5';
+    }
     return int.parse(str) ~/ a;
   } catch (_) {
     // throw Exception("could not be parsed");
