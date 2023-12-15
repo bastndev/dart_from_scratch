@@ -112,9 +112,27 @@ int parse() {
 }
  */
 
-void main() {
+/* void main() {
   try {
     final result = parse('Hello', 1);
+    print(result);
+  } catch (e) {
+    print(e);
+  }
+}
+
+int parse(String str, int a) {
+  try {
+    return int.parse(str) ~/ a;
+  } catch (_) {
+    // throw Exception("could not be parsed");
+    rethrow;
+  }
+} */
+
+void main() {
+  try {
+    final result = parse('2', 0);
     print(result);
   } catch (e) {
     print(e);
