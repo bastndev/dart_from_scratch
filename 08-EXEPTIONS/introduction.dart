@@ -93,7 +93,7 @@ int parse() {
 }
  */
 
-void main() {
+/* void main() {
   try {
     final result = parse();
     print(result);
@@ -110,3 +110,4 @@ int parse() {
     rethrow;
   }
 }
+ */
