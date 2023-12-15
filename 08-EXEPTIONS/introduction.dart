@@ -55,7 +55,7 @@ int parse() {
     return 0;
   }
 } */
-
+/* 
 void main() {
   try {
     final result = parse();
@@ -71,5 +71,23 @@ int parse() {
   } catch (_) {
     print("catch of parse method $_");
     throw 'String cannot be parsed';
+  }
+}
+ */
+
+void main() {
+  try {
+    final result = parse();
+    print(result);
+  } catch (e) {
+    print(e);
+  }
+}
+
+int parse() {
+  try {
+    return int.parse('Hello ');
+  } catch (_) {
+    throw Exception("could not be parsed");
   }
 }
