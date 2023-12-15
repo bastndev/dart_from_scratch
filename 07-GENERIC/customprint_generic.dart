@@ -9,7 +9,11 @@ enum Color {
 }
 
 void main() {
-  var customPrint = CustomPrint(text: 'Print to screen');
+  var customPrint = CustomPrint(
+      text: 'Print to screen',
+      style: PrintStyle(
+          color: PrintAttribute.changeProperty(Color.yellow),
+          separation: PrintAttribute.changeProperty(1)));
   customPrint.write();
 }
 
@@ -23,7 +27,9 @@ class CustomPrint {
 
   String _createSpace() {
     String spaces = '';
-    for (int i = 0; i < style!.separation!.property; i++) {}
+    for (int i = 0; i < style!.separation!.property; i++) {
+      spaces += ' ';
+    }
     return text.split('').join(spaces);
   }
 
