@@ -2,7 +2,8 @@ enum Color {
   empty(''),
   red('\u001B[31m'),
   cyan('\u001B[36m'),
-  yellow('\u001B[33m');
+  yellow('\u001B[33m'),
+  magenta('\u001B[35m');
 
   final String code;
   const Color(this.code);
@@ -12,7 +13,7 @@ void main() {
   var customPrint = CustomPrint(
       text: 'Print to screen',
       style: PrintStyle(
-          color: PrintAttribute.changeProperty(Color.yellow),
+          color: PrintAttribute.changeProperty(Color.magenta),
           separation: PrintAttribute.changeProperty(1)));
   customPrint.write();
 }
