@@ -5,10 +5,11 @@
 }
  */
 
-void main() {
+/* void main() {
   for (int tabla = 1; tabla <= 12; tabla++) {
     for (int i = 1; i <= 12; i++) {
       print("$tabla x $i = ${tabla * i}");
     }
   }
 }
+ */
