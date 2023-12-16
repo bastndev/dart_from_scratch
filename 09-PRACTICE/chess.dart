@@ -22,9 +22,9 @@ void main() {
     String line = "";
     for (int col = 0; col < 8; col++) {
       if ((row + col) % 2 == 0) {
-        line = "$line ▢";
+        line = "$line  ";
       } else {
-        line = "$line ⬛";
+        line = "$line⬛";
       }
     }
     print(line);
