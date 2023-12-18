@@ -5,25 +5,22 @@
   list.add("40 23");
   list.add("a un estas en mis sueños");
   list.add("Ella baila sola");
+
+  list.removeAt(0);
+
   print(list);
 }
  */
 
-/* void main() {
+void main() {
   final list = [];
 
   list.add("Ella baila sola");
   list.add("40 23");
   list.add("a un estas en mis sueños");
-  list.add("Ella baila sola");
+  list.add("Su calor");
 
-  list[2]= "Cuanreanta y 20 ";
+  list.removeLast();
 
-  print(list[2]);
-}
- */
-
-void main() { 
-  final List<String> listName = ["Gohit", "Juan", "Lucas"];
-  print("My best friend is: ${listName[0]}");
+  print(list);
 }
