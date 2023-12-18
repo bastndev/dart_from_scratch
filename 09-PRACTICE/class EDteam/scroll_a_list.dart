@@ -11,3 +11,18 @@
   }
 }
  */
+
+void main() {
+  final list = [];
+
+  list.add("Ella baila sola");
+  list.add("40 23");
+  list.add("a un estas en mis sueños");
+  list.add("Su calor");
+
+  int i = 0;
+  while (i < list.length) {
+    print(list[i]);
+    i++;
+  }
+}
