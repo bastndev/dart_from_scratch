@@ -1,5 +1,5 @@
 void main() {
-  num elderly(a, b) {
+  num elderly(num a, num b) {
     if (a > b) {
       return a;
     }
