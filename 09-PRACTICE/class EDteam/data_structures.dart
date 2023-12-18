@@ -14,7 +14,8 @@
   // final lists = list.length;
   print(list[2]);
 } */
-void main() {
+/* void main() {
   final list = ["The chicken", " 17 years","The Reminder "];
   print(list[list.length - 1]);
 }
+ */
