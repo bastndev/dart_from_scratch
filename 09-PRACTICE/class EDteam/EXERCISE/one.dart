@@ -20,14 +20,6 @@ void main() {
   print("The number most is: $result5");
 }
 
-
-
-
-
-
-
-
-
 /* void main() {
   num elderly(num a, num b) {
     if (a > b) {
