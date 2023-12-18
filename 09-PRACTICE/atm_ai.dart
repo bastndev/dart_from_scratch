@@ -22,15 +22,15 @@ void main() {
         print("You do not have enough balance :(");
       } else {
         balance -= input2;
-        print("Your balance is $balance");
+        print("Your balance is now \$$balance");
       }
     } else if (input == 1) {
       stdout.write("How much do you want Add: ");
       final option3 = stdin.readLineSync() ?? '';
       final input3 = int.tryParse(option3);
 
-      if (input3 == null) {
-        print("Enter Number please:");
+      if (input3 == null || input3 > balance) {
+        print("You do not have enough balance :(");
       } else {
         balance += input3;
         print("Your balance is now \$$balance");
