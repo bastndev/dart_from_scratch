@@ -2,8 +2,12 @@ import 'dart:io';
 
 void main() {
   int balance = 1000;
+  final exitOption = 3;
 
   addBalance(int valor) {
+    if (valor > 100) {
+      return false;
+    }
     balance += valor;
     return true;
   }
@@ -22,7 +26,12 @@ void main() {
 
     final option = stdin.readLineSync() ?? '';
     final input = int.tryParse(option);
-    if (input == 3) {
+
+    if (input == null || (input < 1 || input > exitOption)) {
+      print("Please enter a valid option (1, 2, or 3).");
+      continue;
+    }
+    if (input == exitOption) {
       print("========== bye 👋 =========");
       break;
     }
@@ -35,8 +44,20 @@ void main() {
       if (addAmount != null) {
         addBalance(addAmount);
         print("you Add $addAmount");
-      }else{
+      } else {
         print("please enter a number");
+      }
+    }
+    if (input == 2) {
+      stdout.write("How much balance do you want withdraw: ");
+
+      final option = stdin.readLineSync() ?? '';
+      final subtractAmount = int.tryParse(option);
+      if (subtractAmount != null && subtractAmount <= balance) {
+        withdraw(subtractAmount);
+        print("you Subtract $subtractAmount");
+      } else {
+        print("Insufficient balance to withdraw");
       }
     }
   }
