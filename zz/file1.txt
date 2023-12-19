@@ -1,1 +1,2 @@
 Hello from a file with
+I am second line of file
