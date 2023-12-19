@@ -33,3 +33,17 @@
     print("onError: $err");
   });
 } */
+
+//--- --- -FIXME: Recommend for use 
+void main() async{
+  const timeout = Duration(milliseconds: 750);
+  const wait = Duration(seconds: 1);
+
+  try {
+    await Future.delayed(wait, () {
+      print("I will run");
+    }).timeout(timeout);
+  } catch (err) {
+    print("try catch: $err");
+  }
+}
