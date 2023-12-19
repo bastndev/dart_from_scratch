@@ -24,6 +24,15 @@
 }
  */
 
-void main() {
+/* void main() {
   Future.delayed(const Duration(seconds: 1)).then((_) => print("Hello word"));
+} */
+
+void main() {
+  print("1: Starting the program");
+
+  Future.delayed(const Duration(milliseconds: 1000))
+      .then((_) => print("this will print within 1 second"));
+
+  print("2: Finished the program");
 }
