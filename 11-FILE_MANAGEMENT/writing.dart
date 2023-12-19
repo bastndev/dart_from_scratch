@@ -8,6 +8,6 @@ void main() async {
 
   int interaction = 10;
   for (int i = 0; i < interaction; i++) {
-    file.writeAsString("Writing text in test ${i + 1} \n");
+    await file.writeAsString("Writing text in test ${i + 1} \n", mode: FileMode.append);
   }
 }
