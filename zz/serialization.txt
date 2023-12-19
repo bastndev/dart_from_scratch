@@ -1,0 +1,1 @@
+{"nameEN":"Andorra","nameES":"Andorra","iso":"AD"}

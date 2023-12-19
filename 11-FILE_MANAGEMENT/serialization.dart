@@ -2,8 +2,13 @@
 //-FIXME: Save to Json format
 
 import 'dart:convert';
+import 'dart:io';
 
-void main() async {}
+void main() async {
+  final file = File('zz/serialization.txt');
+  final country = Country(nameEN: 'Andorra', nameES: 'Andorra', iso: 'AD');
+  file.writeAsString(country.toJson());
+}
 
 class Country {
   final String nameEN;
