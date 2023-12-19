@@ -1,5 +1,7 @@
 import 'dart:io';
 
-void main() {
-  final file = File('');
+void main() async {
+  final file = File('zz/file1.txt');
+  final result = await file.readAsBytes();
+  print(String.fromCharCodes(result));
 }
