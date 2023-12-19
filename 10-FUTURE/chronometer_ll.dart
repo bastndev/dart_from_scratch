@@ -1,13 +1,14 @@
 void main() async {
   int seconds = 0;
 
-/*   while (seconds < 60) {
-    await Future.delayed(const Duration(milliseconds: 900));
-    seconds++;
-    print(seconds.toTimer());
-  } */
-
-  
+  Future.doWhile(() {
+    final stop = Future.delayed(const Duration(milliseconds: 1000), () {
+      seconds++;
+      print(seconds.toTimer());
+      return seconds < 60;
+    });
+    return stop;
+  });
 }
 
 extension TimerExtension on int {
