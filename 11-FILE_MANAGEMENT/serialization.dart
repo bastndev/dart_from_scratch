@@ -7,6 +7,11 @@ import 'dart:io';
 void main() async {
   final file = File('zz/serialization.txt');
   final country = Country(nameEN: 'Andorra', nameES: 'Andorra', iso: 'AD');
+
+  String str = await file.readAsString();
+
+  print(Country.fromJson(str));
+
   file.writeAsString(country.toJson());
 }
 
@@ -29,7 +34,7 @@ class Country {
 
   factory Country.fromMap(Map<String, dynamic> map) {
     return Country(
-        nameEN: map['nameEn'], nameES: map['nameES'], iso: map['iso']);
+        nameEN: map['nameEN'], nameES: map['nameES'], iso: map['iso']);
   }
 
   factory Country.fromJson(String str) {
