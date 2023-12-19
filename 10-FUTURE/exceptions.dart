@@ -35,7 +35,7 @@
 } */
 
 //--- --- -FIXME: Recommend for use (we must transform the asynchronous code into synchronous)
-void main() async{
+void main() async {
   const timeout = Duration(milliseconds: 750);
   const wait = Duration(seconds: 1);
 
