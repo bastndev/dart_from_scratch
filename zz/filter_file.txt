@@ -1,0 +1,6 @@
+======== SEARCH BY ñ ========
+nameEn: "Spain", nameES: "España ", iso: "ES"
+nameEn: "Great Britain (UK)", nameES: "Gran Bretaña (Reino Unido) ", iso: "GB"
+======== SEARCH BY pe ========
+nameEn: "Guadeloupe", nameES: "Guadalupe ", iso: "GP"
+nameEn: "Sao Tome and Principe", nameES: "Santo Tomé y Príncipe ", iso: "ST"
