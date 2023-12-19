@@ -1,10 +1,9 @@
 // import 'dart:io';
 //-FIXME: Save to Json format
 
-void main() async {
+import 'dart:convert';
 
-  
-}
+void main() async {}
 
 class Country {
   final String nameEN;
@@ -16,6 +15,20 @@ class Country {
 
   factory Country.fromList(List<String> list) {
     return Country(nameEN: list.first, nameES: list[1], iso: list.last);
+  }
+
+  Map<String, dynamic> toMap() =>
+      {'nameEN': nameEN, 'nameES': nameES, 'iso': iso};
+
+  String toJson() => jsonEncode(toMap());
+
+  factory Country.fromMap(Map<String, dynamic> map) {
+    return Country(
+        nameEN: map['nameEn'], nameES: map['nameES'], iso: map['iso']);
+  }
+
+  factory Country.fromJson(String str) {
+    return Country.fromMap(jsonDecode(str));
   }
 
   @override
