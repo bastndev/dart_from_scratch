@@ -7,3 +7,7 @@ void main() async {
     print(seconds);
   }
 }
+
+extension TimerExtension on int{
+
+}
