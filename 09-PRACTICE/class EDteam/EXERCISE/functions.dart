@@ -21,7 +21,7 @@ void main() {
   greet('Juan');
 } */
 
-//-TODO: Clases: Se utilizan para modelar y encapsular conceptos más complejos mediante la combinación de datos y comportamientos relacionados. Son fundamentales en la programación orientada a objetos y facilitan la creación de estructuras más complejas y modulares en el código.
+// -TODO: Clases: Se utilizan para modelar y encapsular conceptos más complejos mediante la combinación de datos y comportamientos relacionados. Son fundamentales en la programación orientada a objetos y facilitan la creación de estructuras más complejas y modulares en el código.
 
 class Persona {
   String name;
