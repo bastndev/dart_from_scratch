@@ -17,8 +17,13 @@
   });
 } */
 
-void main() {
+/* void main() {
   Future.delayed(const Duration(seconds: 2)).then((_) {
     return print("Hell parce");
   });
+}
+ */
+
+void main() {
+  Future.delayed(const Duration(seconds: 1)).then((_) => print("Hello word"));
 }
