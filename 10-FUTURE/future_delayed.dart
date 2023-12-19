@@ -11,8 +11,14 @@
 }
  */
 
-void main() {
+/* void main() {
   Future.delayed(const Duration(milliseconds: 900)).then((_) {
     return print("This will print within 1 second");
+  });
+} */
+
+void main() {
+  Future.delayed(const Duration(seconds: 2)).then((_) {
+    return print("Hell parce");
   });
 }
