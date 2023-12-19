@@ -13,3 +13,14 @@ import 'dart:io';
   print(result);
 } */
 
+/* void main() async {
+  final file = File('zz/file1.txt');
+  final result = await file.readAsString();
+  print(result);
+} */
+
+void main() async {
+  final file = File('zz/file1.txt');
+  final result = await file.readAsString();
+  print(result.replaceAll('\n',''));
+}
