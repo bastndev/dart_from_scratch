@@ -3,10 +3,29 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:encrypt/encrypt.dart';
+
 void main() async {
   final file = File('zz/encryption.txt');
-  // print(await loadCountries(file));
-  await saveCountries(file);
+  print(await loadCountries(file));
+}
+
+class CustomEncrypt {
+  final key = Key.fromUtf8('01234567890123456789012345678900');
+  final iv = IV.fromLength(16);
+
+  String encrypt(String str) {
+    final encrypter = Encrypter(AES(key));
+
+    final encrypted = encrypter.encrypt(str, iv: iv);
+    return encrypted.base64;
+  }
+
+  String decrypt(String str) {
+    final encrypter = Encrypter(AES(key));
+    final decrypted = encrypter.decrypt64(str, iv: iv);
+    return decrypted;
+  }
 }
 
 Future<void> saveCountries(File file) async {
@@ -16,12 +35,14 @@ Future<void> saveCountries(File file) async {
   ];
 
   final json = jsonEncode(countries);
-  file.writeAsString(json);
+  final jsonEncrypted = CustomEncrypt().encrypt(json);
+  file.writeAsString(jsonEncrypted);
 }
 
 Future<List<Country>> loadCountries(File file) async {
   final json = await file.readAsString();
-  final list = jsonDecode(json) as List<dynamic>;
+  final decryptedJson = CustomEncrypt().decrypt(json);
+  final list = jsonDecode(decryptedJson) as List<dynamic>;
 
   final countries = list.map((e) => Country.fromJson(e)).toList();
   return countries;
@@ -59,3 +80,4 @@ class Country {
     return 'nameEn: $nameEN, nameES: $nameES, iso: $iso\n';
   }
 }
+//-TODO: skirt improve decryption
