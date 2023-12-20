@@ -14,7 +14,18 @@ import 'dart:async';
 }
  */
 
+void main() {
+  final controller = StreamController<int>.broadcast(sync: true);
+  Stream<int> broadcastStream = controller.stream;
 
+/*   controller.add(5); */
+  final sub1 = broadcastStream.listen((event) {
+    print("Sub1: $event");
+  });
+  controller.add(5);
+  final sub2 = broadcastStream.listen((event) {});
+  controller.add(5);
+}
 
 /* void main() {
   final controller = StreamController<int>.broadcast(sync: true);
