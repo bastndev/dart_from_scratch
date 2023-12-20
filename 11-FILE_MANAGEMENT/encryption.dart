@@ -11,7 +11,7 @@ void main() async {
 }
 
 class CustomEncrypt {
-  final key = Key.fromUtf8('01234567890123456789012345678900');
+  final key = Key.fromUtf8('01234567890123456789012345678900'); //Ocultar al usuario Code
   final iv = IV.fromLength(16);
 
   String encrypt(String str) {
