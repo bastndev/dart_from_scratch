@@ -8,6 +8,7 @@ void main() async {
 
   int events = 0;
 
+  // ignore: unused_local_variable
   await for (final data in readStream) {
     events++;
   }
