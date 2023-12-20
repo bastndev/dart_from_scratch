@@ -22,4 +22,13 @@
   });
 } */
 
-// --- Stream Value
+// --- Stream Value | Stream mono subscription
+void main() {
+  Stream<int> stream = Stream.value(2);
+
+  stream.listen((event) {
+    print(event);
+  }, onDone: () {
+    print("Finished Stream");
+  });
+}
