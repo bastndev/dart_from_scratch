@@ -11,7 +11,7 @@ import 'dart:async';
   subscription.cancel();
 }
  */
-
+//--- -FIXME: Streamers are output streams
 void main() {
   StreamSubscription<int> subscription;
   Stream<int> stream = Stream.value(2);
