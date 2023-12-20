@@ -27,6 +27,7 @@ void main() {
   Stream stream = controller.stream; //chanel for share data
 
   // Subscription
+  // ignore: unused_local_variable
   StreamSubscription subscription = stream.listen((value) { //reception value
     print("This is the value: $value");
   });
@@ -41,10 +42,10 @@ void main() {
   controller.add(20);
   controller.add(30);
 
-  subscription.pause();
+/*   subscription.pause();
   subscription.resume();
   subscription.cancel();
-
+ */
   //---EventSink
   // listen reverse stream
 }
