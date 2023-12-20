@@ -1,5 +1,5 @@
 // --- --- -FIXME: Multi Subscription
-import 'dart:async';
+// import 'dart:async';
 
 /* void main() {
   final controller = StreamController<int>.broadcast();
@@ -14,7 +14,7 @@ import 'dart:async';
 }
  */
 
-void main() {
+/* void main() {
   final controller = StreamController<int>.broadcast(sync: true);
   Stream<int> broadcastStream = controller.stream;
 
@@ -26,7 +26,7 @@ void main() {
   final sub2 = broadcastStream.listen((event) {});
   controller.add(5);
 }
-
+ */
 /* void main() {
   final controller = StreamController<int>.broadcast(sync: true);
   Stream<int> broadcastStream = controller.stream;
