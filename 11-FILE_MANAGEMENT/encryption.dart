@@ -1,5 +1,4 @@
 //-FIXME: encryption
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -7,6 +6,7 @@ import 'package:encrypt/encrypt.dart';
 
 void main() async {
   final file = File('zz/encryption.txt');
+  // await saveCountries(file);
   print(await loadCountries(file));
 }
 
@@ -31,7 +31,7 @@ class CustomEncrypt {
 Future<void> saveCountries(File file) async {
   final countries = [
     Country(nameEN: 'Perú', nameES: 'Peru', iso: 'PE'),
-    Country(nameEN: 'Andorra', nameES: 'Andorra', iso: 'AD')
+    Country(nameEN: 'Andorra', nameES: 'Andorra', iso: 'AN')
   ];
 
   final json = jsonEncode(countries);
