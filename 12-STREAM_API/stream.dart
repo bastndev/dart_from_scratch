@@ -31,6 +31,7 @@ void main() {
     print("This is the value: $value");
   });
 
+    // ignore: unused_local_variable
     StreamSubscription subscription2 = stream.listen((value) { //reception value
     print("This is the value2: $value");
   });
@@ -39,5 +40,11 @@ void main() {
   controller.add(10);
   controller.add(20);
   controller.add(30);
-  //EventSink
+
+  subscription.pause();
+  subscription.resume();
+  subscription.cancel();
+
+  //---EventSink
+  // listen reverse stream
 }
