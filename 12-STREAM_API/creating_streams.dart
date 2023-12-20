@@ -9,7 +9,8 @@
 }
  */
 
-void main() {
+// --- Stream error
+/* void main() {
   Stream<int> stream = Stream.error("This is a message to error");
 
   stream.listen((event) {
@@ -19,4 +20,6 @@ void main() {
   }, onError: (err){
     print("Hello $err");
   });
-}
+} */
+
+// --- Stream Value
