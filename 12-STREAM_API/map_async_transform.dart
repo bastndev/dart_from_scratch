@@ -1,7 +1,7 @@
 //Transform the int to string
 import 'dart:async';
 
-void main() {
+/* void main() {
   final stream = Stream.fromIterable([10, 11, 12, 3, 4, 5, 6, 10]);
   Stream<String> transformStream =
       stream.transform(StreamTransformer.fromHandlers(
@@ -10,4 +10,12 @@ void main() {
     },
   ));
   transformStream.listen(print);
+}
+ */
+
+// more easy
+void main() {
+  final stream = Stream.fromIterable([10, 11, 12, 3, 4, 5, 6, 10]);
+
+  stream.map((event) => 'transforming: $event').listen(print);
 }
