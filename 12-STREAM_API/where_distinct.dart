@@ -13,6 +13,7 @@
 import 'dart:async';
 
 void main() {
+  // ignore: unused_local_variable
   final stream = Stream<int>.fromIterable([1, 2, 3, 3, 3, 4, 5, 6]);
 
   final connected = 'CONNECTED :)';
