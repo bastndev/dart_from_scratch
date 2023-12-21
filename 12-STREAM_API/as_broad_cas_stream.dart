@@ -20,10 +20,11 @@
  */
 
 void main() {
-  Stream<int> stream = Stream.value(5);
-  Stream<int> broadcastStream = stream.asBroadcastStream();
+  Stream<int> stream = Stream.value(5).asBroadcastStream();
 
-
+  stream.listen((event) {
+    print(event);
+  });
   stream.listen((event) {
     print(event);
   });
