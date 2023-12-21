@@ -1,7 +1,44 @@
 //-FIXME: In programming, "parsing" refers to analyzing a text string to extract structured information. This process is crucial for converting data in a specific format (such as JSON) into a structure that the program can comprehend and manipulate.
-// import 'dart:async';
+import 'dart:async';
+import 'dart:io';
 
-void main() {}
+void main() {
+  final file = File('files/books.csv');
+  final filterFile = File('files/filter_file.txt');
+
+  String unCompletedLine = '';
+  bool firstRead = true;
+  file.openRead().transform(StreamTransformer.fromHandlers(
+    handleData: (data, sink) {
+      String str = String.fromCharCodes(data);
+
+      if (unCompletedLine.isNotEmpty) {
+        str = unCompletedLine + str;
+        unCompletedLine = '';
+      }
+
+      final lines = str.split('\n');
+      if (firstRead) {
+        lines.removeAt(0);
+        firstRead = false;
+      }
+      List<Book> books = [];
+
+      for (final line in lines) {
+        try {
+          final book = Book.fromLine(line.split(','));
+          books.add(book);
+        } catch (_) {
+          unCompletedLine = line;
+        }
+      }
+
+      String author = 'Tolkien';
+      books.removeWhere((element) =>
+          element.authors.toLowerCase().contains(author.toLowerCase()));
+    },
+  ));
+}
 
 class Book {
   final String bookID;
@@ -51,6 +88,6 @@ class Book {
 
   @override
   String toString() {
-    return 'BookId: $bookID, title: $title, authors: $authors, averageRating $averageRating, isbn: $isbn, isbn13: $isbn13, languageCode: $languageCode, numPages: $numPages, ratingCount: $ratingsCount, textReviewCount: $textReviewsCount, publicationDate: $publicationDate, publisher: $publisher';
+    return 'BookId: $bookID, title: $title, authors: $authors, averageRating $averageRating, isbn: $isbn, isbn13: $isbn13, languageCode: $languageCode, numPages: $numPages, ratingCount: $ratingsCount, textReviewCount: $textReviewsCount, publicationDate: $publicationDate, publisher: $publisher\n';
   }
 }
