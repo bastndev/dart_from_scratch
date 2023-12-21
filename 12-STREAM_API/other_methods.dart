@@ -35,9 +35,24 @@
   print(eventGreaterThanFour);
 } */
 
-void main() async {
+/* void main() async {
   final stream = Stream.fromIterable([6, 5, 4, 3, 2, 1]);
 
   final eventGreaterThanFour = await stream.firstWhere((element) => element > 40, orElse: () => -1,);
   print(eventGreaterThanFour);
+} */
+
+void main() async {
+  final stream = Stream.fromIterable([6, 5, 4, 3, 2, 1]);
+  
+  final eventGreaterThanFour = await stream.firstWhere((element) => element > 40, orElse: () => -1,);
+  print(eventGreaterThanFour);
+
+  try {
+    final event= await stream.elementAt(5);
+    print(event);
+  } catch (err) {
+    print("Papi fix your mistake: $err");
+    
+  }
 }
