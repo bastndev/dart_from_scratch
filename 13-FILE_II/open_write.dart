@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void main() {
+/* void main() {
   final file = File('files/books.csv');
   final copyFile = File('files/booksCopy.csv');
 
@@ -10,4 +10,13 @@ void main() {
   readStream.listen((event) {
     sink.add(event);
   });
+} */
+
+void main() {
+  final file = File('files/books.csv');
+  final copyFile = File('files/booksCopy2.csv');
+
+  final readStream = file.openRead();
+
+  readStream.pipe(copyFile.openWrite());
 }
