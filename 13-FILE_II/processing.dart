@@ -8,7 +8,7 @@ void main() {
 
   String unCompletedLine = '';
   bool firstRead = true;
-  file.openRead().transform(StreamTransformer.fromHandlers(
+  file.openRead().transform<List<int>>(StreamTransformer.fromHandlers(
     handleData: (data, sink) {
       String str = String.fromCharCodes(data);
 
@@ -35,7 +35,7 @@ void main() {
 
       String author = 'Tolkien';
       books.removeWhere((element) =>
-          element.authors.toLowerCase().contains(author.toLowerCase()));
+          !element.authors.toLowerCase().contains(author.toLowerCase()));
       for (final book in books) {
         sink.add(book.toString().codeUnits);
       }
