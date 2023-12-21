@@ -47,8 +47,14 @@
   stream.takeWhile((element) => element > 3).listen(print);
 } */
 
-void main() {
+/* void main() {
   final stream = Stream.fromIterable([6, 5, 4, 3, 2, 1]);
 
   stream.where((element) => element > 3).listen(print);
+} */
+
+void main() {
+  final stream = Stream.fromIterable([6, 5, 4, 3, 2, 1]);
+
+  stream.skipWhile((element) => element > 3).listen(print);
 }
