@@ -1,5 +1,5 @@
 import 'dart:async';
-
+//Stream periodic , recommended
 void main() {
   Timer.periodic(const Duration(seconds: 1), (timer) {
     final seconds = timer.tick;
