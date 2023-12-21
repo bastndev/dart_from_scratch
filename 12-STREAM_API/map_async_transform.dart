@@ -61,4 +61,4 @@ void main() async {
   asyncMapStream.listen(print, onError: (err) {
     print('Error: $err');
   });
-}
+}//control the errors, I want them to be error-proof
