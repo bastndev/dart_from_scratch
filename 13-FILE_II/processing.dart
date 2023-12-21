@@ -36,8 +36,11 @@ void main() {
       String author = 'Tolkien';
       books.removeWhere((element) =>
           element.authors.toLowerCase().contains(author.toLowerCase()));
+      for (final book in books) {
+        sink.add(book.toString().codeUnits);
+      }
     },
-  ));
+  )).pipe(filterFile.openWrite());
 }
 
 class Book {
