@@ -1,3 +1,5 @@
+//-FIXME: Generators functions
+
 /* void main() {
   print("Start program");
 
@@ -65,9 +67,9 @@ Iterable<int> getGeneration() sync* {
   }
 } */
 
-import 'dart:math';
+// import 'dart:math';
 
-void main() {
+/* void main() {
   print("Start program");
 
   getNumbers().listen(print);
@@ -83,4 +85,20 @@ Stream<int> getNumbers() async* {
     await Future.delayed(const Duration(seconds: 1));
     yield data;
   }
+} */
+
+void main() {
+  print("Start program");
+
+  yieldStream().listen((event) {
+    print(event);
+  });
+
+  print("Finished program");
+}
+
+//- function yieldStream()
+Stream<int> yieldStream() async* {
+  yield* Stream<int>.fromIterable([5, 6, 9]);
+  yield* Stream<int>.fromIterable([1, 2, 3]);
 }
