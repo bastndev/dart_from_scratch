@@ -36,7 +36,7 @@ import 'dart:async';
 } */
 
 //--FIXME: recommended async
-void main() async {
+/* void main() async {
   final stream = Stream.fromIterable([10, 11, 12, 3, 4, 5, 6, 10]);
 
   Stream<String> asyncMapStream = stream.asyncMap(
@@ -44,4 +44,21 @@ void main() async {
             return 'transforming: $event';
           }));
   asyncMapStream.listen(print);
+}
+ */
+
+// ERROR: stream
+void main() async {
+  final stream = Stream.fromIterable([10, 11, 12, 3, 4, 5, 6, 10]);
+
+  Stream<String> asyncMapStream = stream.asyncMap(
+      (event) => Future.delayed(const Duration(milliseconds: 1000), () {
+            if (event == 12) {
+              throw 'Sorry Exception';
+            }
+            return 'transforming: $event';
+          }));
+  asyncMapStream.listen(print, onError: (err) {
+    print('Error: $err');
+  });
 }
