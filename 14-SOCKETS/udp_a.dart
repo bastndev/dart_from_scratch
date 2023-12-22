@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() async {
-  final localhost = '120.0.0.1';
+  final localhost = '127.0.0.1';
   final port = 16000;
   final receiverPort = 16001;
 
