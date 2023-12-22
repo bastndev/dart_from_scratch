@@ -10,7 +10,7 @@ void main() async {
 
     print('Receiving data from $remoteAddress:$port');
 
-    socket.transform(StreamTransformer.fromHandlers(handleData: (data, sink) {
+    socket.transform<List<int>>(StreamTransformer.fromHandlers(handleData: (data, sink) {
       sink.add(data);
     })).pipe(File('files/long_copy.txt').openWrite());
   });
