@@ -12,8 +12,8 @@ void main() async {
 
     socket.listen((event) {
       final msg = String.fromCharCodes(event);
-      print('\t Message of client: $msg');
-      socket.write(jsonEncode({'Message:' 'Hello, from the server'}));
+      print(' Message of client: $msg');
+      socket.write(jsonEncode({'Message': 'Hello, from the server'}));
     });
   });
 }

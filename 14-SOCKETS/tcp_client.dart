@@ -10,6 +10,6 @@ void main() async {
   });
 
   stdout.write('Write a message: ');
-  final smg = stdin.readLineSync();
-  socket.write(smg);
+  final msg = stdin.readLineSync() ?? '';
+  socket.write(msg);
 }
