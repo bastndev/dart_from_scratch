@@ -1,4 +1,4 @@
-import 'dart:convert';
+import 'dart:async';
 import 'dart:io';
 
 void main() async {
@@ -10,10 +10,8 @@ void main() async {
 
     print('Receiving data from $remoteAddress:$port');
 
-    socket.listen((event) {
-      final msg = String.fromCharCodes(event);
-      print(' Message of client: $msg');
-      socket.write(jsonEncode({'Message': 'Hello, from the server'}));
-    });
+    socket.transform(StreamTransformer.fromHandlers(handleData: (data, sink) {
+      sink.add(data);
+    })).pipe(File('files/long_copy.txt').openWrite());
   });
 }
