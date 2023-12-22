@@ -8,8 +8,10 @@ void main() async {
 
   //mapearlo
   final data = jsonDecode(response.body);
-  print(data['data']['email']);
-  print("Type response: ${data.runtimeType}");
+  final user = User.fromMap(data);
+
+  print(user.email);
+  print("Type response: ${user.runtimeType}");
 }
 
 // builder - Constructor
@@ -28,8 +30,9 @@ class User {
     required this.avatar,
   });
 
-  //parcearlo
-  factory User.fromMap(Map<String, dynamic> map) {
+  //parcearlo (169. Parseando la respuesta del servidor)
+  factory User.fromMap(Map<String, dynamic> data) {
+    final map = data['data'];
     return User(
       id: map['id'],
       email: map['email'],
