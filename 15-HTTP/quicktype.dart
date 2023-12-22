@@ -13,13 +13,6 @@ void main() async {
   print("Type response: ${user.runtimeType}");
 }
 
-// To parse this JSON data, do
-//
-//     final user = userFromJson(jsonString);
-
-// To parse this JSON data, do
-//
-//     final user = userFromJson(jsonString);
 
 User userFromJson(String str) => User.fromJson(json.decode(str));
 String userToJson(User data) => json.encode(data.toJson());
@@ -28,7 +21,7 @@ class User {
   final Data data;
   final Support support;
 
-  User({
+  const User({
     required this.data,
     required this.support,
   });
