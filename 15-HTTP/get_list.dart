@@ -3,11 +3,15 @@ import 'package:http/http.dart' as http;
 
 // -FIXME: GETTING BETTER
 void main() async {
-  final url = Uri.parse('https://reqres.in/api/users?page=2');
-  http.Response response = await http.get(url);
-  print("State code is ${response.statusCode}");
-  final users = usersFromJson(response.body);
-  print(users.data);
+  try {
+    final url = Uri.parse('https://reqre.in/api/users?page=2');
+    http.Response response = await http.get(url);
+    print("State code is ${response.statusCode}");
+    final users = usersFromJson(response.body);
+    print(users.data);
+  } catch (e) {
+    print("Sorry, something $e");
+  }
 }
 
 // -FIXME:builder - Constructor
