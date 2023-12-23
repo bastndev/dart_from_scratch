@@ -1,4 +1,7 @@
-//-FIXME: // Utilizando try-catch para manejar posibles errores de manera controlada.
+//-FIXME: // "Using try-catch to handle potential errors in a controlled manner."
+//"Let the program flow continue, with a warning. For instance, an image may not load, but the app continues to run and display the other images."
+
+
 //-TODO: with error
 /* void main() {
   String userInput = '3,14';
