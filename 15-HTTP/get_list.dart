@@ -4,11 +4,17 @@ import 'package:http/http.dart' as http;
 // -FIXME: GETTING BETTER
 void main() async {
   try {
+    //add (s ->) in "reqre"
     final url = Uri.parse('https://reqre.in/api/users?page=2');
     http.Response response = await http.get(url);
-    print("State code is ${response.statusCode}");
-    final users = usersFromJson(response.body);
-    print(users.data);
+    final statusCode = response.statusCode;
+    print("State code is $statusCode");
+    if (statusCode == 200) {
+      final users = usersFromJson(response.body);
+      print(users.data);
+    } else {
+      throw Exception('${response.reasonPhrase} $statusCode');
+    }
   } catch (e) {
     print("Sorry, something $e");
   }
