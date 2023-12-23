@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 // -FIXME: GETTING BETTER
@@ -79,6 +80,11 @@ class User {
         "last_name": lastName,
         "avatar": avatar,
       };
+
+  @override
+  String toString() {
+    return 'User(id: $id, email: $email, firstName: $firstName, lastName: $lastName, avatar: $avatar)';
+  }
 }
 
 class Support {
