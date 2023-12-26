@@ -17,8 +17,10 @@ void main() async {
   ];
 
   final file = File('15.1-WEB_SCARPING/url_discover');
+
   for (final keyword in keywords) {
     int page = 1;
+
     final url = getUrl(keyword, page);
     final response = await http.get(url.toUri());
     Document doc = parse(response.body);
@@ -26,13 +28,17 @@ void main() async {
     file.writeAsStringSync('$url\n', mode: FileMode.append);
 
     final ul = doc.getElementById('pages');
-    final children = ul!.children;
-    final element = children[children.length - 3];
-    final pages = int.parse(element.text);
-    ++page;
-    for (int i = page; i <= pages; i++) {
-      final url = getUrl(keyword, i);
-      file.writeAsStringSync('$url\n', mode: FileMode.append);
+    if (ul != null) {
+      final children = ul.children;
+      final element = children[children.length - 3];
+      final pages = int.parse(element.text);
+      ++page;
+      for (int i = page; i <= pages; i++) {
+        final url = getUrl(keyword, i);
+        file.writeAsStringSync('$url\n', mode: FileMode.append);
+      }
+    } else {
+      print("Element with id 'pages' not found in the HTML document for keyword: $keyword");
     }
   }
 }
