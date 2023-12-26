@@ -16,23 +16,24 @@ void main() async {
     'queso'
   ];
 
-  int page = 1;
-  final url = getUrl(keywords.first, page);
-  final response = await http.get(url.toUri());
-  Document doc = parse(response.body);
+  final file = File('15.1-WEB_SCARPING/url_discover');
+  for (final keyword in keywords) {
+    int page = 1;
+    final url = getUrl(keyword, page);
+    final response = await http.get(url.toUri());
+    Document doc = parse(response.body);
 
-  File('15.1-WEB_SCARPING/url_discover')
-      .writeAsStringSync('$url\n', mode: FileMode.append);
+    file.writeAsStringSync('$url\n', mode: FileMode.append);
 
-  final ul = doc.getElementById('pages');
-  final children = ul!.children;
-  final element = children[children.length - 3];
-  final pages = int.parse(element.text);
-  ++page;
-  for (int i = page; i <= pages; i++) {
-    final url = getUrl(keywords.first, i);
-    File('15.1-WEB_SCARPING/url_discover')
-        .writeAsStringSync('$url\n', mode: FileMode.append);
+    final ul = doc.getElementById('pages');
+    final children = ul!.children;
+    final element = children[children.length - 3];
+    final pages = int.parse(element.text);
+    ++page;
+    for (int i = page; i <= pages; i++) {
+      final url = getUrl(keyword, i);
+      file.writeAsStringSync('$url\n', mode: FileMode.append);
+    }
   }
 }
 
