@@ -39,8 +39,27 @@ void main() async {
     final tds = tr.children;
     final title = tds.first.text.trim();
     final value = tds[1].text.trim();
-    print('$title: $value');
+    // print('$title: $value');
+
+    if (title == NutritionalInfoType.energy.name) {
+      product.energy = value;
+    } else if (title == NutritionalInfoType.fast.name) {
+      product.fast = value;
+    } else if (title == NutritionalInfoType.saturateFast.name) {
+      product.saturateFast = value;
+    } else if (title == NutritionalInfoType.carbohydrates.name) {
+      product.carbohydrates = value;
+    } else if (title == NutritionalInfoType.sugars.name) {
+      product.sugars = value;
+    } else if (title == NutritionalInfoType.fiber.name) {
+      product.fiber = value;
+    } else if (title == NutritionalInfoType.proteins.name) {
+      product.proteins = value;
+    } else if (title == NutritionalInfoType.salt.name) {
+      product.salt = value;
+    }
   }
+  print(product);
 }
 
 enum NutritionalInfoType {
@@ -49,9 +68,9 @@ enum NutritionalInfoType {
   saturateFast('Grasas saturadas'),
   carbohydrates('Hidratos de carbono'),
   sugars('Azúcares'),
-  fiber('Fibra'),
-  proteins('Proteinas'),
-  salt('sal');
+  fiber('Fibra alimentaria'),
+  proteins('Proteínas'),
+  salt('Sal');
 
   final String name;
   const NutritionalInfoType(this.name);
