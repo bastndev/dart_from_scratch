@@ -1,5 +1,5 @@
 <!-- start templates/web/common/site_layout.tt.html -->
-
+//Change .txt to .html
 <!doctype html>
 <html class="no-js" lang="es" data-serverdomain="openfoodfacts.org" dir="ltr">
 <head>
