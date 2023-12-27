@@ -17,8 +17,8 @@ void main() async {
   }
   print("Product: $productName");
 
-  final barCode = doc.getElementById('barcode');
-  String barcode = barCode?.text ?? '';
+  final barCodeElement = doc.getElementById('barcode');
+  String barcode = barCodeElement?.text ?? '';
 
   print("Barcode: $barcode");
 }
