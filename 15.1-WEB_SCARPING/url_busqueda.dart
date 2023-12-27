@@ -18,7 +18,7 @@ void main() async {
 
   final urlSearch = OpenFoodFactsUrl('15.1-WEB_SCARPING/url_disco');
   for (final keyword in keywords) {
-    urlSearch.search(keyword);
+    await urlSearch.search(keyword);
   }
 }
 
@@ -34,6 +34,7 @@ class OpenFoodFactsUrl {
   const OpenFoodFactsUrl(this.savePath);
 
   Future<void> search(String keyword) async {
+    print('Start the search of $keyword');
     final url = getUrl(keyword, 1);
     final response = await http.get(url.toUri());
     Document doc = parse(response.body);
@@ -44,6 +45,7 @@ class OpenFoodFactsUrl {
     final children = ul!.children;
     final element = children[children.length - 3];
     final pages = int.parse(element.text);
+    print('searching pages of $keyword');
 
     for (int i = 2; i <= pages; i++) {
       final url = getUrl(keyword, i);
@@ -52,7 +54,8 @@ class OpenFoodFactsUrl {
   }
 
   void write(String url) {
-    File(savePath).writeAsStringSync('$url\n', mode: FileMode.append); // Fixed placement of FileMode.append
+    File(savePath).writeAsStringSync('$url\n',
+        mode: FileMode.append); // Fixed placement of FileMode.append
   }
 
   String getUrl(String keyword, int page) {
