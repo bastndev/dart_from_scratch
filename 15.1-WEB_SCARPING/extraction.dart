@@ -24,7 +24,10 @@ void main() async {
   String barcode = barCodeElement?.text ?? '';
   print("Barcode: $barcode");
 
-  //..Css operator, | cascade operator 
+  //..Css operator, | cascade operator
+  product
+    ..name = productName
+    ..barcode = barcode;
 
   print('');
 
@@ -38,6 +41,20 @@ void main() async {
     final value = tds[1].text.trim();
     print('$title: $value');
   }
+}
+
+enum NutritionalInfoType {
+  energy('Energía'),
+  fast('Grasas'),
+  saturateFast('Grasas saturadas'),
+  carbohydrates('Hidratos de carbono'),
+  sugars('Azúcares'),
+  fiber('Fibra'),
+  proteins('Proteinas'),
+  salt('sal');
+
+  final String name;
+  const NutritionalInfoType(this.name);
 }
 
 class NutritionalInfoProduct {
