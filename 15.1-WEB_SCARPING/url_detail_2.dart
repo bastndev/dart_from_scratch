@@ -10,7 +10,7 @@ void main() async {
 }
 
 class OpenFoodFactsDetail {
-  final String baseUrl = 'https://es.openfoodfacts.com';
+  final String baseUrl = 'https://es.openfoodfacts.org';
   final String readPath;
   final String savePath;
 
