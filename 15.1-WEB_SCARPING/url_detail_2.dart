@@ -19,7 +19,6 @@ class OpenFoodFactsDetail {
   Future<void> getDetailsUrl() async {
     final urls = File(readPath).readAsLinesSync().sublist(0, 5);
 
-    final baseUrl = 'https://es.openfoodfacts.com';
     for (final url in urls) {
       print('search products in: $url');
       final uri = Uri.parse(url);
