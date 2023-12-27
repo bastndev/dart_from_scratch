@@ -17,8 +17,20 @@ void main() async {
   }
   print("Product: $productName");
 
+  //Id: code
   final barCodeElement = doc.getElementById('barcode');
   String barcode = barCodeElement?.text ?? '';
-
   print("Barcode: $barcode");
+  print('');
+
+  //barcode Nutrition
+  final tbody = doc.getElementsByTagName('tbody').first;
+  final str = tbody.children;
+
+  for (final tr in str) {
+    final tds = tr.children;
+    final title = tds.first.text.trim();
+    final value = tds[1].text.trim();
+    print('$title: $value');
+  }
 }
