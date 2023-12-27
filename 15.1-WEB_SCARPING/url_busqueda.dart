@@ -18,7 +18,8 @@ void main() async {
 
   final urlSearch = OpenFoodFactsUrl('15.1-WEB_SCARPING/url_disco');
   for (final keyword in keywords) {
-    await urlSearch.search(keyword);
+    urlSearch.search(keyword); //parallel
+    // await urlSearch.search(keyword); // async
   }
 }
 
