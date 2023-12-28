@@ -4,8 +4,22 @@ import 'dart:io';
 // import 'package:flutter/widgets.dart';
 import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
+import 'package:mysql_client/mysql_client.dart';
 
 void main() async {
+  final conn = await MySQLConnection.createConnection(
+    host: "127.0.0.1",
+    port: 3306,
+    userName: "root",
+    password: "root",
+    databaseName: "test",
+  );
+
+// actually connect to database
+  await conn.connect();
+
+  await conn.close();
+
   final urls =
       File('15.1-WEB_SCARPING/products2').readAsLinesSync().sublist(0, 10);
   final products = <NutritionalInfoProduct>[];
