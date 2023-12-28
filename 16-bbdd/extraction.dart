@@ -49,8 +49,6 @@ void main() async {
       ..name = productName
       ..barcode = barcode;
 
-    print('');
-
     //barcode Nutrition
     final tbody = doc.getElementsByTagName('tbody').first;
     final str = tbody.children;
@@ -82,7 +80,15 @@ void main() async {
 /* 
       await conn.close();
     products.add(product); */
-    await conn.execute('', {});
+final sql = '''
+INSERT INTO nutritional_info
+(id, name, barcode, energy, fats, saturatedFast,
+carbohydrates, sugars, fiber, proteins, salt)
+VALUES (:id, :name, :barcode, :energy, :fats,
+:saturatedFast, :carbohydrates, :sugars, :fiber, :proteins, :salt)
+''';
+await conn.execute(sql, product.toMap());
+
   }
   await conn.close();
 /*   print(products);
@@ -162,7 +168,7 @@ class NutritionalInfoProduct {
   }
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'id': id,
       'name': name,
       'barcode': barcode,
@@ -181,8 +187,7 @@ class NutritionalInfoProduct {
   bool operator ==(covariant NutritionalInfoProduct other) {
     if (identical(this, other)) return true;
 
-    return 
-        other.name == name &&
+    return other.name == name &&
         other.barcode == barcode &&
         other.energy == energy &&
         other.fats == fats &&
