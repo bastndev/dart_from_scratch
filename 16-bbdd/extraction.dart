@@ -1,6 +1,7 @@
 // import 'dart:convert';
 import 'dart:io';
 
+//Escribe bien por qu ela las fallas ortograficas no cago
 // import 'package:flutter/widgets.dart';
 import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
@@ -61,10 +62,10 @@ void main() async {
 
       if (title == NutritionalInfoType.energy.name) {
         product.energy = value;
-      } else if (title == NutritionalInfoType.fats.name) {
-        product.fats = value;
-      } else if (title == NutritionalInfoType.saturatedFast.name) {
-        product.saturatedFast = value;
+      } else if (title == NutritionalInfoType.fast.name) {
+        product.fast = value;
+      } else if (title == NutritionalInfoType.saturateFast.name) {
+        product.saturateFast = value;
       } else if (title == NutritionalInfoType.carbohydrates.name) {
         product.carbohydrates = value;
       } else if (title == NutritionalInfoType.sugars.name) {
@@ -80,15 +81,14 @@ void main() async {
 /* 
       await conn.close();
     products.add(product); */
-final sql = '''
+    final sql = '''
 INSERT INTO nutritional_info
-(id, name, barcode, energy, fats, saturatedFast,
+(id, name, barcode, energy, fats, saturateFast,
 carbohydrates, sugars, fiber, proteins, salt)
-VALUES (:id, :name, :barcode, :energy, :fats,
+VALUES (:id, :name, :barcode, :energy, :fast,
 :saturatedFast, :carbohydrates, :sugars, :fiber, :proteins, :salt)
 ''';
-await conn.execute(sql, product.toMap());
-
+    await conn.execute(sql, product.toMap());
   }
   await conn.close();
 /*   print(products);
@@ -97,8 +97,8 @@ await conn.execute(sql, product.toMap());
 
 enum NutritionalInfoType {
   energy('Energía'),
-  fats('Grasas'),
-  saturatedFast('Grasas saturadas'),
+  fast('Grasas'),
+  saturateFast('Grasas saturadas'),
   carbohydrates('Hidratos de carbono'),
   sugars('Azúcares'),
   fiber('Fibra alimentaria'),
@@ -114,8 +114,8 @@ class NutritionalInfoProduct {
   String? name;
   String? barcode;
   String? energy;
-  String? fats;
-  String? saturatedFast;
+  String? fast;
+  String? saturateFast;
   String? carbohydrates;
   String? sugars;
   String? fiber;
@@ -126,8 +126,8 @@ class NutritionalInfoProduct {
     this.name,
     this.barcode,
     this.energy,
-    this.fats,
-    this.saturatedFast,
+    this.fast,
+    this.saturateFast,
     this.carbohydrates,
     this.sugars,
     this.fiber,
@@ -137,15 +137,15 @@ class NutritionalInfoProduct {
 
   @override
   String toString() {
-    return 'NutritionalInfoProduct(name: $name, barcode: $barcode, energy: $energy, fats: $fats, saturatedFast: $saturatedFast, carbohydrates: $carbohydrates, sugars: $sugars, fiber: $fiber, proteins: $proteins, salt: $salt)';
+    return 'NutritionalInfoProduct(name: $name, barcode: $barcode, energy: $energy, fast: $fast, saturateFast: $saturateFast, carbohydrates: $carbohydrates, sugars: $sugars, fiber: $fiber, proteins: $proteins, salt: $salt)';
   }
 
   NutritionalInfoProduct copyWith({
     String? name,
     String? barcode,
     String? energy,
-    String? fats,
-    String? saturatedFast,
+    String? fast,
+    String? saturateFast,
     String? carbohydrates,
     String? sugars,
     String? fiber,
@@ -157,8 +157,8 @@ class NutritionalInfoProduct {
       name: name ?? this.name,
       barcode: barcode ?? this.barcode,
       energy: energy ?? this.energy,
-      fats: fats ?? this.fats,
-      saturatedFast: saturatedFast ?? this.saturatedFast,
+      fast: fast ?? this.fast,
+      saturateFast: saturateFast ?? this.saturateFast,
       carbohydrates: carbohydrates ?? this.carbohydrates,
       sugars: sugars ?? this.sugars,
       fiber: fiber ?? this.fiber,
@@ -173,8 +173,8 @@ class NutritionalInfoProduct {
       'name': name,
       'barcode': barcode,
       'energy': energy,
-      'fats': fats,
-      'saturatedFast': saturatedFast,
+      'fats': fast,
+      'saturateFast': saturateFast,
       'carbohydrates': carbohydrates,
       'sugars': sugars,
       'fiber': fiber,
@@ -190,8 +190,8 @@ class NutritionalInfoProduct {
     return other.name == name &&
         other.barcode == barcode &&
         other.energy == energy &&
-        other.fats == fats &&
-        other.saturatedFast == saturatedFast &&
+        other.fast == fast &&
+        other.saturateFast == saturateFast &&
         other.carbohydrates == carbohydrates &&
         other.sugars == sugars &&
         other.fiber == fiber &&
@@ -204,8 +204,8 @@ class NutritionalInfoProduct {
     return name.hashCode ^
         barcode.hashCode ^
         energy.hashCode ^
-        fats.hashCode ^
-        saturatedFast.hashCode ^
+        fast.hashCode ^
+        saturateFast.hashCode ^
         carbohydrates.hashCode ^
         sugars.hashCode ^
         fiber.hashCode ^
