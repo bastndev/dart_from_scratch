@@ -1,6 +1,6 @@
 // import 'dart:convert';
 import 'dart:io';
-
+//cage por no escribir correctamente los nombres
 //Escribe bien por qu ela las fallas ortograficas no cago
 // import 'package:flutter/widgets.dart';
 import 'package:html/parser.dart';
@@ -82,11 +82,11 @@ void main() async {
       await conn.close();
     products.add(product); */
     final sql = '''
-INSERT INTO nutritional_info
+INSERT INTO nutritional_info2
 (id, name, barcode, energy, fats, saturateFast,
 carbohydrates, sugars, fiber, proteins, salt)
-VALUES (:id, :name, :barcode, :energy, :fast,
-:saturatedFast, :carbohydrates, :sugars, :fiber, :proteins, :salt)
+VALUES (:id, :name, :barcode, :energy, :fats,
+:saturateFast, :carbohydrates, :sugars, :fiber, :proteins, :salt)
 ''';
     await conn.execute(sql, product.toMap());
   }
