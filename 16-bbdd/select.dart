@@ -4,7 +4,9 @@ import 'mysql_connection.dart';
 
 void main() async {
   handleConnection((conn) async {
-    final result = await conn.execute('SELECT * FROM users');
+    // final result = await conn.execute('SELECT * FROM users');
+    final result = await conn
+        .execute('SELECT * FROM users where name = :name', {'name': 'test'});
     final rows = result.rows.toList();
     final data = rows.map((e) => User.fromMap(e.typedAssoc())).toList();
     print(data);
@@ -59,11 +61,11 @@ class User {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is User &&
-      other.id == id &&
-      other.name == name &&
-      other.age == age;
+        other.id == id &&
+        other.name == name &&
+        other.age == age;
   }
 
   @override
