@@ -1,4 +1,14 @@
+--Docker Tips
+/* ls
+cd bin
+mysql -uroot -p"root"
 
+show databases;
+use test
+desc users;
+desc nutritional_info; */
+
+delete from nutritional_info;
 
 -- change name in the future fast = fats and saturateFast to saturatedFast 
 CREATE TABLE nutritional_info2 (id varchar(255), name TEXT(255), barcode varchar(255), energy varchar(255),
