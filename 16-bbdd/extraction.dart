@@ -22,6 +22,7 @@ void main() async {
 
   final urls =
       File('15.1-WEB_SCARPING/products2').readAsLinesSync().sublist(0, 10);
+  // ignore: unused_local_variable
   final products = <NutritionalInfoProduct>[];
   for (final url in urls) {
     final response = await http.get(Uri.parse(url));
