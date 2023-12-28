@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
 import 'package:mysql_client/mysql_client.dart';
+import 'package:uuid/uuid.dart';
 
 void main() async {
   final conn = await MySQLConnection.createConnection(
@@ -18,8 +19,6 @@ void main() async {
 // actually connect to database
   await conn.connect();
 
-  await conn.close();
-
   final urls =
       File('15.1-WEB_SCARPING/products2').readAsLinesSync().sublist(0, 10);
   final products = <NutritionalInfoProduct>[];
@@ -30,7 +29,7 @@ void main() async {
     final h2s = doc.getElementsByTagName('h2');
     String productName = '';
 
-    final product = NutritionalInfoProduct();
+    final product = NutritionalInfoProduct(id: const Uuid().v4());
 
     for (final h2 in h2s) {
       if (h2.attributes.containsValue('food:name')) {
@@ -80,10 +79,14 @@ void main() async {
         product.salt = value;
       }
     }
-    products.add(product);
+/* 
+      await conn.close();
+    products.add(product); */
+    await conn.execute('', {});
   }
-  print(products);
-  File('15.1-WEB_SCARPING/results').writeAsStringSync(jsonEncode(products));
+  await conn.close();
+/*   print(products);
+  File('15.1-WEB_SCARPING/results').writeAsStringSync(jsonEncode(products)); */
 }
 
 enum NutritionalInfoType {
@@ -101,6 +104,7 @@ enum NutritionalInfoType {
 }
 
 class NutritionalInfoProduct {
+  final String id;
   String? name;
   String? barcode;
   String? energy;
@@ -112,6 +116,7 @@ class NutritionalInfoProduct {
   String? proteins;
   String? salt;
   NutritionalInfoProduct({
+    required this.id,
     this.name,
     this.barcode,
     this.energy,
@@ -142,6 +147,7 @@ class NutritionalInfoProduct {
     String? salt,
   }) {
     return NutritionalInfoProduct(
+      id: id,
       name: name ?? this.name,
       barcode: barcode ?? this.barcode,
       energy: energy ?? this.energy,
@@ -156,12 +162,13 @@ class NutritionalInfoProduct {
   }
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
+      'id': id,
       'name': name,
       'barcode': barcode,
       'energy': energy,
       'fast': fast,
-      'saturateFast': saturateFast,
+      'saturatedFast': saturateFast,
       'carbohydrates': carbohydrates,
       'sugars': sugars,
       'fiber': fiber,
@@ -170,31 +177,11 @@ class NutritionalInfoProduct {
     };
   }
 
-  factory NutritionalInfoProduct.fromMap(Map<String, dynamic> map) {
-    return NutritionalInfoProduct(
-      name: map['name'],
-      barcode: map['barcode'],
-      energy: map['energy'],
-      fast: map['fast'],
-      saturateFast: map['saturateFast'],
-      carbohydrates: map['carbohydrates'],
-      sugars: map['sugars'],
-      fiber: map['fiber'],
-      proteins: map['proteins'],
-      salt: map['salt'],
-    );
-  }
-
-  String toJson() => json.encode(toMap());
-
-  factory NutritionalInfoProduct.fromJson(String source) =>
-      NutritionalInfoProduct.fromMap(json.decode(source));
-
   @override
-  bool operator ==(Object other) {
+  bool operator ==(covariant NutritionalInfoProduct other) {
     if (identical(this, other)) return true;
 
-    return other is NutritionalInfoProduct &&
+    return 
         other.name == name &&
         other.barcode == barcode &&
         other.energy == energy &&
