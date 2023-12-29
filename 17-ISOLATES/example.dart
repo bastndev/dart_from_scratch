@@ -14,8 +14,11 @@ void main() {
   Isolate.spawn((message) {
     print('Started isolate 2');
     SendPort sendPort = message.first as SendPort;
-    int interations = message.last as int;
+    int iterations = message.last as int;
+    _createLoop(iterations, 'Isolate 2');
   }, message);
+
+  _createLoop(iterations, 'Main isolate');
 }
 
 int _createLoop(int iterations, String isolateName) {
