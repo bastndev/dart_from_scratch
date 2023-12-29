@@ -17,3 +17,12 @@ void main() {
     int interations = message.last as int;
   }, message);
 }
+
+int _createLoop(int iterations, String isolateName) {
+  int total = 0;
+  for (int i = 0; i < iterations; i++) {
+    total += i;
+    print('$isolateName: $total');
+  }
+  return total;
+}
