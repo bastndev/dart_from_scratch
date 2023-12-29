@@ -15,6 +15,7 @@ void main() async {
         Service.getIsolateId(Isolate.current) ?? "Main isolate don't have ID";
     print('Isolate 1: $mainIsolateID');
     print('Isolate 2: $isolate2ID');
+    receivePort.close();
   });
 
   final isolate2 = await Isolate.spawn((message) {
