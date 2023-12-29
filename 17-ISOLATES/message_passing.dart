@@ -10,6 +10,7 @@ void main() {
 
   receivePor.listen((message) {
     print(message);
+    receivePor.close();
   });
 
   final user = User(name: 'Gohit', email: 'test@gmail.com');
