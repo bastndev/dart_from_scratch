@@ -6,11 +6,13 @@ void main() {
   final mainIsolateID = Service.getIsolateId(mainIsolate);
   print(mainIsolateID);
 
-  final user = User(name: 'Gohit', email: 'pablito@gmail.com');
+  final receivePor = ReceivePort();
+  final user = User(name: 'Gohit', email: 'test@gmail.com');
+  final message = [receivePor.sendPort, user];
 
   Isolate.spawn((message) {
-    print("Message inside isolate: $message");
-  }, user);
+    
+  }, message);
 }
 
 class User {
