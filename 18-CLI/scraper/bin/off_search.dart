@@ -1,21 +1,16 @@
 //-TODO: The purpose of creating a Command-Line Interface (CLI) is to ensure its functionality on all computers.
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/dom.dart';
 import 'package:html/parser.dart';
 
-void main() async {
-  List<String> keywords = [
-    'carne',
-    'leche',
-    'pescado',
-    'atun',
-    'tomate',
-    'legumbres', // Fixed typo in 'legumbres'
-    'pollo',
-    'queso'
-  ];
+void main(List<String> args) async {
+  final argParser = ArgParser();
+
+  final argResult = argParser.parse(args);
+  final keywords = argResult.rest;
 
   final urlSearch = OpenFoodFactsUrl();
   for (final keyword in keywords) {
