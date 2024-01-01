@@ -17,7 +17,7 @@ void main() async {
     'queso'
   ];
 
-  final urlSearch = OpenFoodFactsUrl('15.1-WEB_SCARPING/url_disco');
+  final urlSearch = OpenFoodFactsUrl();
   for (final keyword in keywords) {
     urlSearch.search(keyword); //parallel
     // await urlSearch.search(keyword); // async
@@ -31,9 +31,8 @@ extension StringToUri on String {
 class OpenFoodFactsUrl {
   final String searchUrl =
       'https://es.openfoodfacts.org/cgi/search.pl?action=process&search_terms={keyword}&sort_by=unique_scans_n&page_size=54&page={page}';
-  final String savePath;
 
-  const OpenFoodFactsUrl(this.savePath);
+  const OpenFoodFactsUrl();
 
   Future<void> search(String keyword) async {
     print('Start the search of $keyword');
@@ -55,8 +54,8 @@ class OpenFoodFactsUrl {
     }
   }
 
-  void write(String url) {
-    File(savePath).writeAsStringSync('$url\n',
+  write(String url) {
+    File('./url_discover').writeAsStringSync('$url\n',
         mode: FileMode.append); // Fixed placement of FileMode.append
   }
 
