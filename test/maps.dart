@@ -9,7 +9,7 @@ void main() {
     'object': 'Map'
   };
 
-
-
-    
+  test('$map has the value map', () {
+    expect(map, containsValue('Map'));
+  });
 }
