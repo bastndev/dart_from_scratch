@@ -3,9 +3,10 @@ import 'dart:io';
 import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
 
-void main() async {
-  final detailsSearch = OpenFoodFactsDetail(
-      '15.1-WEB_SCARPING/url_disco', '15.1-WEB_SCARPING/products2');
+void main(List<String> args) async {
+  final readPath = args.first;
+  final savePath = args[1];
+  final detailsSearch = OpenFoodFactsDetail(readPath, savePath);
   detailsSearch.getDetailsUrl();
 }
 
