@@ -8,5 +8,7 @@ void main() {
     expect(str, contains('r'));
   });
 
-
+  test('$str Start the letter D', () {
+    expect(str, startsWith('d'));
+  });
 }
