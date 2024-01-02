@@ -17,4 +17,10 @@ void main() {
     expect(str, equals('dart'));
     expect(str, equalsIgnoringCase('DART'));
   });
+
+  const dartFlutter = 'dart         and         flutter';
+  test('$strB is equal to dartFlutter, ignore spaces', () {
+    expect(strB, equalsIgnoringWhitespace(dartFlutter));
+    expect(strB, isNot(equals(dartFlutter)));
+  });
 }
