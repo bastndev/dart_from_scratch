@@ -6,4 +6,8 @@ void main() {
   test('$listA contains the value 2', () {
     expect(listA, contains(4));
   });
+
+  test('$listA contains equals [1, 2, 4, 6] exact', () {
+    expect(listA, orderedEquals([1, 2, 4, 6]));
+  });
 }
