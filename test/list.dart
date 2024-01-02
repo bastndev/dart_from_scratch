@@ -15,5 +15,14 @@ void main() {
     expect(listA, unorderedEquals([1, 2, 6, 4]));
   });
 
-  
+  test('$listA contains value 6  ', () {
+    expect(listA, anyElement(6));
+  });
+  test(' all the elements of the $listA not have the value 6  ', () {
+    expect(listA, isNot(everyElement(6)));
+  });
+
+  test('$listA contains element 6 one time  ', () {
+    expect(listA, containsOnce(6));
+  });
 }
