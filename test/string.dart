@@ -10,5 +10,11 @@ void main() {
 
   test('$str Start the letter D', () {
     expect(str, startsWith('d'));
+    expect(str, isNot(startsWith('D')));
+  });
+
+  test('$str is equal to dart and ignore case', () {
+    expect(str, equals('dart'));
+    expect(str, equalsIgnoringCase('DART'));
   });
 }
