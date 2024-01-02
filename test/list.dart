@@ -10,4 +10,10 @@ void main() {
   test('$listA contains equals [1, 2, 4, 6] exact', () {
     expect(listA, orderedEquals([1, 2, 4, 6]));
   });
+
+  test('$listA contains un order equals [1, 2, 4, 6] ', () {
+    expect(listA, unorderedEquals([1, 2, 6, 4]));
+  });
+
+  
 }
