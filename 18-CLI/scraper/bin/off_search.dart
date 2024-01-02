@@ -7,12 +7,13 @@ import 'package:html/dom.dart';
 import 'package:html/parser.dart';
 
 void main(List<String> args) async {
-  final argParser = ArgParser();
+  final argParser = ArgParser()..addFlag('split', abbr: 's');
 
   final argResult = argParser.parse(args);
+  bool shouldSplit = argResult['split'] as bool;
   final keywords = argResult.rest;
 
-  final urlSearch = OpenFoodFactsUrl();
+  final urlSearch = OpenFoodFactsUrl(shouldSplit);
   for (final keyword in keywords) {
     urlSearch.search(keyword); //parallel
     // await urlSearch.search(keyword); // async
@@ -24,10 +25,11 @@ extension StringToUri on String {
 }
 
 class OpenFoodFactsUrl {
+  final bool split;
   final String searchUrl =
       'https://es.openfoodfacts.org/cgi/search.pl?action=process&search_terms={keyword}&sort_by=unique_scans_n&page_size=54&page={page}';
 
-  const OpenFoodFactsUrl();
+  const OpenFoodFactsUrl(this.split);
 
   Future<void> search(String keyword) async {
     print('Start the search of $keyword');
@@ -35,7 +37,7 @@ class OpenFoodFactsUrl {
     final response = await http.get(url.toUri());
     Document doc = parse(response.body);
 
-    write(url);
+    write(url, keyword);
 
     final ul = doc.getElementById('pages');
     final children = ul!.children;
@@ -45,12 +47,12 @@ class OpenFoodFactsUrl {
 
     for (int i = 2; i <= pages; i++) {
       final url = getUrl(keyword, i);
-      write(url);
+      write(url, keyword);
     }
   }
 
-  write(String url) {
-    File('./url_discover').writeAsStringSync('$url\n',
+  write(String url, String keyword) {
+    File('./${split ? keyword: 'url_discover'}').writeAsStringSync('$url\n',
         mode: FileMode.append); // Fixed placement of FileMode.append
   }
 
