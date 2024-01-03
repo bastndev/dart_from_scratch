@@ -10,7 +10,7 @@ import 'package:http/http.dart' as http;
 class ReqResAPI {
   const ReqResAPI();
 
-  Future<Map<String, String>> getAll(http.Client client) async {
+  Future<Map<String, dynamic>> getAll(http.Client client) async {
     try {
       final response =
           await client.get(Uri.parse('https://reqres.in/api/users'));
@@ -21,4 +21,10 @@ class ReqResAPI {
   }
 }
 
-void main() {}
+void main() {
+  test('Get All', () async {
+    final api = ReqResAPI();
+    final response = await api.getAll(http.Client());
+    expect(response, contains('data'));
+  });
+}
