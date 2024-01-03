@@ -20,7 +20,7 @@ void main() {
     expect(value, equalsIgnoringCase('Dart Testing'));
   });
 
-  test('$map contains the email pair and art@test.com', () {
-
+  test('$map contains the email pair and dart@test.com', () {
+    expect(map, containsPair('email', 'dart@test.com'));
   });
 }
