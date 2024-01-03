@@ -26,5 +26,9 @@ void main() {
     final api = ReqResAPI();
     final response = await api.getAll(http.Client());
     expect(response, contains('data'));
+    expect(response, containsPair('page', 1));
+    //NO es buena practica hace test en el HTTP ya que el servidor puede estar caido
   });
 }
+
+//-TODO:2.Use mocks
