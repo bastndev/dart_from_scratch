@@ -70,5 +70,11 @@ void main() {
       final res = calculator.divide([2, 5]).res;
       expect(res, 1);
     });
+
+    test('float numbers', () {
+      final result = calculator.sum([1.1,2.1,3.1,4.1]).multiply([3]).divide([10]).subtract([3]).res;
+      // print(result);
+      expect(result, 0.12);
+    });
   });
 }
