@@ -19,4 +19,8 @@ void main() {
     final value = map[key];
     expect(value, equalsIgnoringCase('Dart Testing'));
   });
+
+  test('$map contains the email pair and art@test.com', () {
+
+  });
 }
