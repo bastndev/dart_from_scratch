@@ -22,7 +22,7 @@ class Calculator {
 
   Calculator divide(List<num> numbers) {
     if (numbers.any((element) => element == 0)) {
-      throw Exception("don't know how to divide");
+      throw Exception("don't know how to divide between 0");
     }
     result = numbers.fold(
         result, (previousValue, element) => previousValue / element);
@@ -63,6 +63,12 @@ void main() {
       }
 
       expect(testDivision, throwsA(predicate((ex) => ex is Exception)));
+    });
+
+    test('Sum + Division', () {
+      calculator.sum([1, 5, 4]);
+      final res = calculator.divide([2, 5]).res;
+      expect(res, 1);
     });
   });
 }
