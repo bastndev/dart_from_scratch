@@ -33,11 +33,24 @@ class Calculator {
 }
 
 void main() {
-  test('Sum', () {
-    final calculator = Calculator();
-    num result = calculator.sum([1]).res;
-    expect(result, 1);
-    result = calculator.sum([2, 3, 4]).res;
-    expect(result, 10);
+  group('Name of test', () {
+    late Calculator calculator;
+    // setUpAll(() {
+    //   calculator = Calculator();
+    // });
+    setUp(() {
+      calculator = Calculator();
+    });
+    test('Sum', () {
+      num result = calculator.sum([1]).res;
+      expect(result, 1);
+      result = calculator.sum([2, 3, 4]).res;
+      expect(result, 10);
+    });
+
+    test('Subtract', () {
+      final calculator = Calculator();
+      expect(calculator.subtract([1, 2]).res, -3);
+    });
   });
 }
