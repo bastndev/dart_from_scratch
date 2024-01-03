@@ -52,5 +52,17 @@ void main() {
       final calculator = Calculator();
       expect(calculator.subtract([1, 2]).res, -3);
     });
+
+    test('Division', () {
+      void testDivision() {
+        try {
+          calculator.divide([1, 2, 0, 3]);
+        } catch (_) {
+          rethrow;
+        }
+      }
+
+      expect(testDivision, throwsA(predicate((ex) => ex is Exception)));
+    });
   });
 }
