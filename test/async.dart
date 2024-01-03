@@ -24,7 +24,7 @@ class ReqResAPI {
 void main() {
   test('Get All', () async {
     final api = ReqResAPI();
-    final response = await api.getAll(http.Client());
+    final response = await api.getAll(getClient());
     expect(response, contains('data'));
     expect(response, containsPair('page', 1));
     //NO es buena practica hace test en el HTTP ya que el servidor puede estar caido
@@ -35,7 +35,7 @@ void main() {
 
 http_testing.MockClient getClient() {
   return http_testing.MockClient((request) async {
-    return http.Response('', 200);
+    return http.Response(jsonEncode(reqResMockResponse), 200);
   });
 }
 
