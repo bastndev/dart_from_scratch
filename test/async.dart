@@ -22,12 +22,22 @@ class ReqResAPI {
 }
 
 void main() {
-  test('Get All', () async {
-    final api = ReqResAPI();
-    final response = await api.getAll(getClient());
-    expect(response, contains('data'));
-    expect(response, containsPair('page', 1));
-    //NO es buena practica hace test en el HTTP ya que el servidor puede estar caido
+  group('Test ReqResAPI', () {
+    tearDownAll(() => print('TEAR DOWN ALL'));
+    tearDown(() => print('TEAR DOWN '));
+    test('Get All', () async {
+      final api = ReqResAPI();
+      final response = await api.getAll(getClient());
+      expect(response, contains('data'));
+      expect(response, containsPair('page', 1));
+      //NO es buena practica hace test en el HTTP ya que el servidor puede estar caido
+    });
+    test('Get All 2', () async {
+      final api = ReqResAPI();
+      final response = await api.getAll(getClient());
+      expect(response, contains('data'));
+      expect(response, containsPair('page', 1));
+    });
   });
 }
 
