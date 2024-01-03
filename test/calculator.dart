@@ -28,7 +28,16 @@ class Calculator {
         result, (previousValue, element) => previousValue / element);
     return this;
   }
+
   num get res => result;
 }
 
-void main() {}
+void main() {
+  test('Sum', () {
+    final calculator = Calculator();
+    num result = calculator.sum([1]).res;
+    expect(result, 1);
+    result = calculator.sum([2, 3, 4]).res;
+    expect(result, 10);
+  });
+}
